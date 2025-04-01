@@ -1,12 +1,13 @@
 # Little Town Remake
 
+## About
+GameMaker Tutorial remade in Godot to understand the differences between the two game engines and improve understanding of Godot.  
+Original Tutorial: https://gamemaker.io/de/tutorials/little-town-gamemaker-tutorial
+
 **Status**: WIP  
 **Genre:** top town 2D, adventure  
 **Engine**: Godot 4.4  
 **Language**: GDScript  
-
-GameMaker Tutorial remade in Godot to understand the differences between the two game engines and improve understanding of Godot.  
-Original Tutorial: https://gamemaker.io/de/tutorials/little-town-gamemaker-tutorial
 
 ![Screenshot Godot 4.4](https://i.imgur.com/G9iwKYq.png)
 
@@ -27,8 +28,8 @@ Original Tutorial: https://gamemaker.io/de/tutorials/little-town-gamemaker-tutor
 - Music, ambience SFX, 2D audio, SFX
 
 ## Add-Ons
-- Godot Git Plugin (4.1+) from the AssetLib https://godotengine.org/asset-library/asset/1581
-- TODO Manager (Godot 4) from the AssetLib https://godotengine.org/asset-library/asset/1327
+- Godot Git Plugin (4.1+) from the [AssetLib](https://godotengine.org/asset-library/asset/1581)
+- TODO Manager (Godot 4) from the [AssetLib](https://godotengine.org/asset-library/asset/1327)
 
 ## Assets
 - **Tilesheet**: YoYo Games
@@ -38,7 +39,7 @@ Original Tutorial: https://gamemaker.io/de/tutorials/little-town-gamemaker-tutor
 - **SFX**: AudioHero
 
 ## Learning Ressources
-- Official Godot tutorial: [Your first 2D Game]([url](https://docs.godotengine.org/en/stable/getting_started/first_2d_game/index.html)
+- Official Godot tutorial: [Your first 2D Game](https://docs.godotengine.org/en/stable/getting_started/first_2d_game/index.html)
 - GDScript Reference
-- GameMaker Tutorial: [Make Your Adventure Game]([url](https://gamemaker.io/de/tutorials/little-town-gamemaker-tutorial))
-- GameDev.tv course: Complete Godot 4 2D: Code Your Own 2D Games In Godot 4!
+- GameMaker Tutorial: [Make Your Adventure Game](https://gamemaker.io/de/tutorials/little-town-gamemaker-tutorial)
+- GameDev.tv course: [Complete Godot 4 2D: Code Your Own 2D Games In Godot 4!](https://www.gamedev.tv/courses/godot-complete-2d)
