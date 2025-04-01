@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0y0n2gnj6801"]
+
+[ext_resource type="Script" uid="uid://dia2ssr0d8rrj" path="res://scripts/item.gd" id="1_7vr8k"]
+[ext_resource type="Texture2D" uid="uid://b6uc5aj8h3ek3" path="res://assets/textures/items/spr_item02.png" id="1_h071m"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7vr8k"]
+radius = 18.0
+height = 52.0
+
+[node name="Apple" type="StaticBody2D"]
+collision_layer = 4
+script = ExtResource("1_7vr8k")
+itemName = "Apple"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, 0)
+texture = ExtResource("1_h071m")
+offset = Vector2(-1, -30)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -7)
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_7vr8k")

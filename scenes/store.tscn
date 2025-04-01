@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqyj2h7fmnvcl"]
+
+[ext_resource type="Texture2D" uid="uid://dw0ww3ml0g1id" path="res://assets/textures/town/spr_store01.png" id="1_jmp1n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_atuvt"]
+size = Vector2(1004, 548)
+
+[node name="Store" type="StaticBody2D"]
+y_sort_enabled = true
+collision_layer = 8
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -2)
+texture = ExtResource("1_jmp1n")
+offset = Vector2(-1, -506)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -259)
+shape = SubResource("RectangleShape2D_atuvt")

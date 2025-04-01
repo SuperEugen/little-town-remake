@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0daisl5r8mqq"]
+
+[ext_resource type="Texture2D" uid="uid://dg2jldt2ilqfv" path="res://assets/textures/items/spr_item04.png" id="1_gdnv7"]
+[ext_resource type="Script" uid="uid://dia2ssr0d8rrj" path="res://scripts/item.gd" id="1_y2cc7"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y2cc7"]
+radius = 19.0
+height = 92.0
+
+[node name="Scale" type="StaticBody2D"]
+collision_layer = 4
+script = ExtResource("1_y2cc7")
+itemName = "Scale"
+itemWeight = 5.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_gdnv7")
+offset = Vector2(0, -29)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -6)
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_y2cc7")

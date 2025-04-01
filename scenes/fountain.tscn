@@ -1,0 +1,72 @@
+[gd_scene load_steps=10 format=3 uid="uid://doxdr74hckhem"]
+
+[ext_resource type="Texture2D" uid="uid://buvupdat3fx0" path="res://assets/textures/town/spr_fountain_strip05.png" id="1_50hkb"]
+[ext_resource type="AudioStream" uid="uid://be82gfc3tmcrb" path="res://assets/audio/snd_fountain.wav" id="2_m72p2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m72p2"]
+atlas = ExtResource("1_50hkb")
+region = Rect2(0, 0, 500, 395)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lfgns"]
+atlas = ExtResource("1_50hkb")
+region = Rect2(500, 0, 500, 395)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uterx"]
+atlas = ExtResource("1_50hkb")
+region = Rect2(1000, 0, 500, 395)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xo7qt"]
+atlas = ExtResource("1_50hkb")
+region = Rect2(1500, 0, 500, 395)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ifxtb"]
+atlas = ExtResource("1_50hkb")
+region = Rect2(2000, 0, 500, 395)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jc6qj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m72p2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lfgns")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uterx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xo7qt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ifxtb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mqf4m"]
+radius = 157.0
+height = 494.0
+
+[node name="Fountain" type="StaticBody2D"]
+y_sort_enabled = true
+collision_layer = 8
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(3, 1)
+sprite_frames = SubResource("SpriteFrames_jc6qj")
+autoplay = "default"
+frame_progress = 0.74685
+offset = Vector2(-3, -195)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -145)
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_mqf4m")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_m72p2")
+autoplay = true
+max_distance = 1000.0

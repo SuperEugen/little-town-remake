@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://hrdh4yyrwyuj"]
+
+[ext_resource type="Texture2D" uid="uid://dhsyo8qug52py" path="res://assets/textures/ui/spr_gui_textbox.png" id="1_xvd2c"]
+
+[node name="DialogBox" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -206)
+texture = ExtResource("1_xvd2c")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -221.0
+offset_top = -317.0
+offset_right = 222.0
+offset_bottom = -101.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Put whatever text you like into this string!"
+autowrap_mode = 3

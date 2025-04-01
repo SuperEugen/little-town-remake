@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bctaux30bxsor"]
+
+[ext_resource type="Texture2D" uid="uid://dq5fn58uhlp3k" path="res://assets/textures/town/spr_rock01.png" id="1_1di36"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mek2u"]
+radius = 58.0
+height = 268.0
+
+[node name="Rock" type="StaticBody2D"]
+collision_layer = 8
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -3)
+texture = ExtResource("1_1di36")
+offset = Vector2(0, -67)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
+position = Vector2(0, -37)
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_mek2u")

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://smlugcir7vou"]
+
+[ext_resource type="Texture2D" uid="uid://tobaxqidk3ua" path="res://assets/textures/town/spr_tree01.png" id="1_avsvi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vplca"]
+radius = 89.0225
+
+[node name="Tree" type="StaticBody2D"]
+y_sort_enabled = true
+collision_layer = 8
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2, 0)
+texture = ExtResource("1_avsvi")
+offset = Vector2(-2, -474)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-21, -72)
+shape = SubResource("CircleShape2D_vplca")
