@@ -1,15 +1,22 @@
 # Little Town Remake
 
 **Status**: WIP  
-**Gerne:** top town 2D, adventure  
-Made with Godot 4.4  
+**Genre:** top town 2D, adventure  
+**Engine**: Godot 4.4  
+**Language**: GDScript  
 
-GameMaker Tutorial remade in Godot  
+GameMaker Tutorial remade in Godot to understand the differences between the two game engines and improve understanding of Godot.  
 Original Tutorial: https://gamemaker.io/de/tutorials/little-town-gamemaker-tutorial
 
 ![Screenshot Godot 4.4](https://i.imgur.com/G9iwKYq.png)
 
-## Mechanics
+## How to Play
+- Use WASD or arrow keys to walk around
+- Use Shift to run
+- Use Space to pick-up or put-down an item or to talk to an NPC
+- Finish the game by finding and giving the correct items to the NPCs
+
+## Implementation Details
 - Player with sprite animation
 - 4 way movement of player
 - 3 NPCs with animations
@@ -29,3 +36,9 @@ Original Tutorial: https://gamemaker.io/de/tutorials/little-town-gamemaker-tutor
 - **UI**: YoYo Games
 - **Music**: AudioHero
 - **SFX**: AudioHero
+
+## Learning Ressources
+- Official Godot tutorial: [Your first 2D Game]([url](https://docs.godotengine.org/en/stable/getting_started/first_2d_game/index.html)
+- GDScript Reference
+- GameMaker Tutorial: [Make Your Adventure Game]([url](https://gamemaker.io/de/tutorials/little-town-gamemaker-tutorial))
+- GameDev.tv course: Complete Godot 4 2D: Code Your Own 2D Games In Godot 4!
