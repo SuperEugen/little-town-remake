@@ -1,3 +1,4 @@
+# This is the player
 class_name Player
 
 extends CharacterBody2D
