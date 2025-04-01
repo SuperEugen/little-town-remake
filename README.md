@@ -27,7 +27,7 @@ Original Tutorial: https://gamemaker.io/de/tutorials/little-town-gamemaker-tutor
 - Start screen and Game Over screen
 - Music, ambience SFX, 2D audio, SFX
 
-## :electric_plug: Add-Ons
+## :electric_plug: Plug-ins
 - Godot Git Plugin (4.1+) from the [AssetLib](https://godotengine.org/asset-library/asset/1581)
 - TODO Manager (Godot 4) from the [AssetLib](https://godotengine.org/asset-library/asset/1327)
 
