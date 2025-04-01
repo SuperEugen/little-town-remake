@@ -40,6 +40,6 @@ Original Tutorial: https://gamemaker.io/de/tutorials/little-town-gamemaker-tutor
 
 ## Learning Ressources
 - Official Godot tutorial: [Your first 2D Game](https://docs.godotengine.org/en/stable/getting_started/first_2d_game/index.html)
-- GDScript Reference
+- GDScript Reference [Godot Docs](https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_basics.html)
 - GameMaker Tutorial: [Make Your Adventure Game](https://gamemaker.io/de/tutorials/little-town-gamemaker-tutorial)
 - GameDev.tv course: [Complete Godot 4 2D: Code Your Own 2D Games In Godot 4!](https://www.gamedev.tv/courses/godot-complete-2d)
