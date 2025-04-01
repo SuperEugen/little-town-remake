@@ -1,6 +1,6 @@
 # Little Town Remake
 
-## About
+## :pushpin: About
 GameMaker Tutorial remade in Godot to understand the differences between the two game engines and improve understanding of Godot.  
 Original Tutorial: https://gamemaker.io/de/tutorials/little-town-gamemaker-tutorial
 
@@ -11,13 +11,13 @@ Original Tutorial: https://gamemaker.io/de/tutorials/little-town-gamemaker-tutor
 
 ![Screenshot Godot 4.4](https://i.imgur.com/G9iwKYq.png)
 
-## How to Play
+## :video_game: How to Play
 - Use WASD or arrow keys to walk around
 - Use Shift to run
 - Use Space to pick-up or put-down an item or to talk to an NPC
 - Finish the game by finding and giving the correct items to the NPCs
 
-## Implementation Details
+## :mag: Implementation Details
 - Player with sprite animation
 - 4 way movement of player
 - 3 NPCs with animations
@@ -27,18 +27,18 @@ Original Tutorial: https://gamemaker.io/de/tutorials/little-town-gamemaker-tutor
 - Start screen and Game Over screen
 - Music, ambience SFX, 2D audio, SFX
 
-## Add-Ons
+## :electric_plug: Add-Ons
 - Godot Git Plugin (4.1+) from the [AssetLib](https://godotengine.org/asset-library/asset/1581)
 - TODO Manager (Godot 4) from the [AssetLib](https://godotengine.org/asset-library/asset/1327)
 
-## Assets
+## :framed_picture: Assets
 - **Tilesheet**: YoYo Games
 - **Sprite**: YoYo Games
 - **UI**: YoYo Games
 - **Music**: AudioHero
 - **SFX**: AudioHero
 
-## Learning Ressources
+## 🧑‍🏫 Learning Ressources
 - Official Godot tutorial: [Your first 2D Game](https://docs.godotengine.org/en/stable/getting_started/first_2d_game/index.html)
 - GDScript Reference [Godot Docs](https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_basics.html)
 - GameMaker Tutorial: [Make Your Adventure Game](https://gamemaker.io/de/tutorials/little-town-gamemaker-tutorial)
