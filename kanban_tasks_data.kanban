@@ -1,0 +1,50 @@
+{
+	"categories": [
+		{
+			"uuid": "5a26b530-8862-4b7e-bcca-3d7229182c40",
+			"title": "Task",
+			"color": "70bafa"
+		}
+	],
+	"stages": [
+		{
+			"uuid": "26d25471-301d-4925-a7a7-d3836dc80581",
+			"title": "Todo",
+			"tasks": [
+				"d409a232-8ca2-4d1a-ab3d-72863b8e4eb2"
+			]
+		},
+		{
+			"uuid": "cfbfa11a-7dd3-4222-8f07-abab75a3dccb",
+			"title": "Doing",
+			"tasks": []
+		},
+		{
+			"uuid": "a976b599-a384-4504-9ee9-220449b4af16",
+			"title": "Done",
+			"tasks": []
+		}
+	],
+	"tasks": [
+		{
+			"uuid": "d409a232-8ca2-4d1a-ab3d-72863b8e4eb2",
+			"title": "Ordering of Items",
+			"description": "Carried item should be in front of player when moving down, left or right.",
+			"category": "5a26b530-8862-4b7e-bcca-3d7229182c40",
+			"steps": []
+		}
+	],
+	"layout": {
+		"columns": [
+			[
+				"26d25471-301d-4925-a7a7-d3836dc80581"
+			],
+			[
+				"cfbfa11a-7dd3-4222-8f07-abab75a3dccb"
+			],
+			[
+				"a976b599-a384-4504-9ee9-220449b4af16"
+			]
+		]
+	}
+}
