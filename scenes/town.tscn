@@ -20,7 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://c0daisl5r8mqq" path="res://scenes/scale.tscn" id="18_8m6oo"]
 [ext_resource type="PackedScene" uid="uid://box6k2mlx3e3" path="res://scenes/rolling_pin.tscn" id="19_uvrjk"]
 [ext_resource type="AudioStream" uid="uid://bkx0qdlxjjqa7" path="res://assets/audio/snd_townBGM.wav" id="21_0havn"]
-[ext_resource type="AudioStream" uid="uid://cthey7d8o4o8i" path="res://assets/audio/snd_townAmbience.wav" id="22_ov17k"]
+[ext_resource type="AudioStream" uid="uid://dt53wk3r8tjdy" path="res://assets/audio/ambience_friedenau.wav" id="21_ov17k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ms2es"]
 resource_name = "townTiles"
@@ -346,6 +346,6 @@ volume_db = -10.0
 autoplay = true
 
 [node name="BGAmbience" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("22_ov17k")
+stream = ExtResource("21_ov17k")
 volume_db = -5.0
 autoplay = true

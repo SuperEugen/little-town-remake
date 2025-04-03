@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c4h0g10artbuc" path="res://assets/textures/other/spr_dust.png" id="1_jwyyd"]
 
 [node name="DustCloud" type="Node2D"]
+y_sort_enabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_jwyyd")

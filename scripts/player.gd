@@ -47,6 +47,7 @@ func _physics_process(delta: float) -> void:
 
 			if Input.is_action_pressed("shift"):
 				velocity = dirInput * runSpeed
+				Global.createDustCloud(self)
 			else:
 				velocity = dirInput * walkSpeed
 
