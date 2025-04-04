@@ -45,4 +45,7 @@ Original Tutorial: https://gamemaker.io/de/tutorials/little-town-gamemaker-tutor
 - GameDev.tv course: [Complete Godot 4 2D: Code Your Own 2D Games In Godot 4!](https://www.gamedev.tv/courses/godot-complete-2d)
 
 ## :trophy: Take Away
-- GameMaker understands animated GIFs, in Godot these have to be converted to image sequences
+- GameMaker understands animated GIFs, in Godot these have to be converted to image sequences.
+- Y-sorting can be automated in Godot.
+- User interface in Godot is classic editor with properties pane, in GameMaker editor windowas are laid out on an endless canvas which is more difficult to navigate.
+- GameMaker is easier to start with but Godot offers more posibilities with extra layers of complexity.
