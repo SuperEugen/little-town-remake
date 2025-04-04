@@ -63,7 +63,7 @@ func _physics_process(delta: float) -> void:
 			playerDirection = DIR.UP
 		# otherwise don't change dirFacing
 	
-	if actionPossible:
+	if actionPossible or hasItem != null:
 		if Input.is_action_just_pressed("space"):
 			if detectedBody is NPC:
 				if dialogActive:
