@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b3x6babvslpqm"]
+[gd_scene load_steps=26 format=3 uid="uid://b3x6babvslpqm"]
 
 [ext_resource type="Texture2D" uid="uid://ea1w30s156ae" path="res://assets/textures/bg/greenBG-1.png" id="1_f42gu"]
 [ext_resource type="Texture2D" uid="uid://b0glbp8iyin2s" path="res://assets/textures/bg/greenBG-2.png" id="2_2757n"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dqcoaoyafvtxa" path="res://assets/textures/bg/greenBG-4.png" id="4_8wqx2"]
 [ext_resource type="Texture2D" uid="uid://bh60a1h2goucn" path="res://assets/textures/npcs/baker/spr_baker_happy_strip04.png" id="5_8wqx2"]
 [ext_resource type="Texture2D" uid="uid://cdniyq0f66dkx" path="res://assets/textures/npcs/baker/spr_baker_walk_left_strip04.png" id="6_3gf5k"]
+[ext_resource type="Texture2D" uid="uid://cor1sfc6lhjhy" path="res://assets/textures/npcs/baker/spr_baker_sad_strip04.png" id="7_3gf5k"]
 [ext_resource type="AudioStream" uid="uid://holsu0k8tbuo" path="res://assets/audio/snd_seq_good01_BGM.wav" id="7_rp7jh"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3gf5k"]
@@ -60,6 +61,22 @@ region = Rect2(510, 0, 255, 509)
 atlas = ExtResource("6_3gf5k")
 region = Rect2(765, 0, 255, 509)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_rp7jh"]
+atlas = ExtResource("7_3gf5k")
+region = Rect2(0, 0, 275, 450)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1xix"]
+atlas = ExtResource("7_3gf5k")
+region = Rect2(275, 0, 275, 450)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_82gsv"]
+atlas = ExtResource("7_3gf5k")
+region = Rect2(550, 0, 275, 450)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epi4g"]
+atlas = ExtResource("7_3gf5k")
+region = Rect2(825, 0, 275, 450)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_i1xix"]
 animations = [{
 "frames": [{
@@ -95,6 +112,23 @@ animations = [{
 "loop": true,
 "name": &"move left",
 "speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rp7jh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i1xix")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_82gsv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epi4g")
+}],
+"loop": true,
+"name": &"sad",
+"speed": 5.0
 }]
 
 [sub_resource type="Animation" id="Animation_4phio"]
@@ -106,10 +140,10 @@ tracks/0/path = NodePath("BG:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.0001, 0.166667),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
 "update": 1,
-"values": [0, 0, 0]
+"values": []
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -118,10 +152,10 @@ tracks/1/path = NodePath("BG:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.266667, 3.73333, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -252,8 +286,11 @@ _data = {
 [node name="cutsceneBakerHappy" type="Node2D"]
 
 [node name="BG" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(960, 540)
 sprite_frames = SubResource("SpriteFrames_3gf5k")
+autoplay = "default"
+frame_progress = 0.110013
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
 volume_db = -10.0
@@ -263,7 +300,7 @@ position = Vector2(2088, 549)
 sprite_frames = SubResource("SpriteFrames_i1xix")
 animation = &"move left"
 autoplay = "move left"
-frame_progress = 0.134193
+frame_progress = 0.281614
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

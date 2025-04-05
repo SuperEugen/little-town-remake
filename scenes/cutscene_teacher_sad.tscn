@@ -132,10 +132,10 @@ tracks/0/path = NodePath("BG:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.166667, 0.333333, 0.5, 0.666667, 0.833333, 1, 1.16667, 1.3326, 1.49926, 1.66593, 1.8326, 2, 2.16667, 2.33333, 2.5, 2.66667, 2.83333, 3, 3.16667, 3.33333, 3.5, 3.66667, 3.83333),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
 "update": 1,
-"values": [0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2]
+"values": []
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -296,6 +296,8 @@ _data = {
 modulate = Color(1, 1, 1, 0)
 position = Vector2(960, 540)
 sprite_frames = SubResource("SpriteFrames_6xu3q")
+autoplay = "default"
+frame_progress = 0.724691
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
 stream = SubResource("AudioStreamPolyphonic_ne3mw")
@@ -306,7 +308,6 @@ position = Vector2(2088, 549)
 sprite_frames = SubResource("SpriteFrames_4mjdc")
 animation = &"move left"
 autoplay = "move left"
-frame_progress = 0.484486
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

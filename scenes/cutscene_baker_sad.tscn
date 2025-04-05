@@ -30,7 +30,7 @@ animations = [{
 "speed": 8.0
 }]
 
-[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_8hagy"]
+[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_tc5j7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4phio"]
 atlas = ExtResource("5_my0du")
@@ -143,10 +143,10 @@ tracks/0/path = NodePath("BG:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.0001, 0.0002, 0.166667, 0.333333, 0.5, 0.666667, 0.833333, 1, 1.16667, 1.33333, 1.5, 1.66667, 1.83333, 2, 2.16647, 2.33313, 2.4998, 2.66647, 2.83313, 2.9998, 3.16647, 3.33313, 3.4998, 3.66647, 3.83313),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
 "update": 1,
-"values": [0, 0, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3]
+"values": []
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -308,9 +308,10 @@ modulate = Color(1, 1, 1, 0)
 position = Vector2(960, 540)
 sprite_frames = SubResource("SpriteFrames_6xu3q")
 autoplay = "default"
+frame_progress = 0.450177
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
-stream = SubResource("AudioStreamPolyphonic_8hagy")
+stream = SubResource("AudioStreamPolyphonic_tc5j7")
 volume_db = -10.0
 autoplay = true
 
@@ -319,7 +320,6 @@ position = Vector2(2088, 549)
 sprite_frames = SubResource("SpriteFrames_4mjdc")
 animation = &"move left"
 autoplay = "move left"
-frame_progress = 0.457153
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
