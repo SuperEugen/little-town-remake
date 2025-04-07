@@ -340,6 +340,8 @@ itemWeight = 0.6
 [node name="Player" parent="Environment" instance=ExtResource("1_gt07c")]
 position = Vector2(2205, 1285)
 
+[node name="Cutscenes" type="Node2D" parent="."]
+
 [node name="BGMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("21_0havn")
 volume_db = -10.0

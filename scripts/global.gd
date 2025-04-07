@@ -101,3 +101,6 @@ func createDustCloud(char: CharacterBody2D) -> void:
 	tweenFade.tween_callback(dustCloudInstance.queue_free)
 	
 	char.add_sibling(dustCloudInstance)
+
+func showCutscene(name: String) -> void:
+	pass

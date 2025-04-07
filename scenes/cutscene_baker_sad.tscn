@@ -1,5 +1,6 @@
-[gd_scene load_steps=27 format=3 uid="uid://bqnqr73fm0vbi"]
+[gd_scene load_steps=28 format=3 uid="uid://bqnqr73fm0vbi"]
 
+[ext_resource type="Script" uid="uid://b4oxra0uihb7s" path="res://scripts/cutscenes.gd" id="1_7umlp"]
 [ext_resource type="Texture2D" uid="uid://d0ijaxmtirsw1" path="res://assets/textures/bg/blueBG-1.png" id="1_tc5j7"]
 [ext_resource type="Texture2D" uid="uid://r81yecu7ch" path="res://assets/textures/bg/blueBG-2.png" id="2_7umlp"]
 [ext_resource type="Texture2D" uid="uid://bdkxbwtkvu4st" path="res://assets/textures/bg/blueBG-3.png" id="3_my0du"]
@@ -288,13 +289,13 @@ _data = {
 }
 
 [node name="cutsceneBakerSad" type="Node2D"]
+script = ExtResource("1_7umlp")
 
 [node name="BG" type="AnimatedSprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(960, 540)
 sprite_frames = SubResource("SpriteFrames_6xu3q")
 autoplay = "default"
-frame_progress = 0.455762
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
 volume_db = -10.0
@@ -312,3 +313,5 @@ libraries = {
 &"": SubResource("AnimationLibrary_4u03q")
 }
 autoplay = "RESET"
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

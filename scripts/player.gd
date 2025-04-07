@@ -94,6 +94,9 @@ func _physics_process(delta: float) -> void:
 					Global.playSFX(Global.SFX.PUT_DOWN)
 					# when animation finished state will be changed to idle					
 	
+	if Input.is_action_just_pressed("test"):
+		Global.show
+	
 	animatePlayer()
 	move_and_slide()
 
@@ -114,9 +117,6 @@ func _physics_process(delta: float) -> void:
 				hasItem.global_position = Vector2(global_position.x + 50, \
 												  global_position.y - 90)
 			# TODO: put item behind player
-	
-#	if hasItem != null:
-#		hasItem.global_position = Vector2(global_position.x, global_position.y - 70)
 
 func _on_awareness_body_entered(body: Node2D) -> void:
 	Global.fadeInPrompt(self)
@@ -169,3 +169,6 @@ func animatePlayer() -> void:
 			animPostfix = "Down"
 	
 	animSprite.play(animPrefix + animPostfix)
+
+func _sceneFinished() -> void:
+	pass
