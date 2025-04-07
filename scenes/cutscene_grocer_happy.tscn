@@ -30,7 +30,7 @@ animations = [{
 "speed": 8.0
 }]
 
-[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_n2mm4"]
+[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_du7jy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a0h4s"]
 atlas = ExtResource("4_fqki3")
@@ -315,7 +315,7 @@ autoplay = "default"
 frame_progress = 0.925854
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
-stream = SubResource("AudioStreamPolyphonic_n2mm4")
+stream = SubResource("AudioStreamPolyphonic_du7jy")
 volume_db = -10.0
 
 [node name="Grocer" type="AnimatedSprite2D" parent="."]
@@ -323,7 +323,7 @@ position = Vector2(2100, 549)
 sprite_frames = SubResource("SpriteFrames_xmtsg")
 animation = &"move left"
 autoplay = "move left"
-frame_progress = 0.958375
+frame_progress = 0.180933
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

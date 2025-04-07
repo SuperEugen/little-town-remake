@@ -319,7 +319,7 @@ position = Vector2(2088, 549)
 sprite_frames = SubResource("SpriteFrames_xmtsg")
 animation = &"move left"
 autoplay = "move left"
-frame_progress = 0.604822
+frame_progress = 0.336048
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

@@ -30,7 +30,7 @@ animations = [{
 "speed": 8.0
 }]
 
-[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_uf0oy"]
+[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_6lmxm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ofng5"]
 atlas = ExtResource("5_yp1kc")
@@ -303,7 +303,7 @@ sprite_frames = SubResource("SpriteFrames_6xu3q")
 autoplay = "default"
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
-stream = SubResource("AudioStreamPolyphonic_uf0oy")
+stream = SubResource("AudioStreamPolyphonic_6lmxm")
 volume_db = -10.0
 
 [node name="Teacher" type="AnimatedSprite2D" parent="."]
@@ -311,7 +311,7 @@ position = Vector2(2088, 549)
 sprite_frames = SubResource("SpriteFrames_4mjdc")
 animation = &"move left"
 autoplay = "move left"
-frame_progress = 0.85672
+frame_progress = 0.347071
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
