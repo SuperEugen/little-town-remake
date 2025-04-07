@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://bqnqr73fm0vbi"]
+[gd_scene load_steps=26 format=3 uid="uid://bqnqr73fm0vbi"]
 
 [ext_resource type="Texture2D" uid="uid://d0ijaxmtirsw1" path="res://assets/textures/bg/blueBG-1.png" id="1_tc5j7"]
 [ext_resource type="Texture2D" uid="uid://r81yecu7ch" path="res://assets/textures/bg/blueBG-2.png" id="2_7umlp"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://cdniyq0f66dkx" path="res://assets/textures/npcs/baker/spr_baker_walk_left_strip04.png" id="6_e8828"]
 [ext_resource type="Texture2D" uid="uid://cor1sfc6lhjhy" path="res://assets/textures/npcs/baker/spr_baker_sad_strip04.png" id="7_6xu3q"]
 [ext_resource type="AudioStream" uid="uid://holsu0k8tbuo" path="res://assets/audio/snd_seq_good01_BGM.wav" id="7_vo2w1"]
-[ext_resource type="AudioStream" uid="uid://q83hn8i2swrp" path="res://assets/audio/snd_seq_bad01_BGM.wav" id="8_4mjdc"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6xu3q"]
 animations = [{
@@ -29,8 +28,6 @@ animations = [{
 "name": &"default",
 "speed": 8.0
 }]
-
-[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_tc5j7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4phio"]
 atlas = ExtResource("5_my0du")
@@ -139,77 +136,50 @@ length = 4.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("BG:frame")
+tracks/0/path = NodePath("BG:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 1,
-"values": []
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("BG:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.233333, 3.73333, 4),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Baker:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Baker:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
 "times": PackedFloat32Array(0, 1, 3, 4),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(2088, 549), Vector2(960, 549), Vector2(960, 549), Vector2(-100, 549)]
 }
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Baker:animation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Baker:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
 "times": PackedFloat32Array(0, 1, 3),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [&"move left", &"sad", &"move left"]
 }
-tracks/4/type = "audio"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Music")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("8_4mjdc")
-}],
-"times": PackedFloat32Array(0)
-}
-tracks/4/use_blend = true
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Music:volume_db")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Music:volume_db")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
 "times": PackedFloat32Array(0, 3.36667, 4),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [-10.0, -10.0, -42.416]
+"values": [-10.0, -10.0, -40.0]
 }
 
 [sub_resource type="Animation" id="Animation_rp7jh"]
@@ -308,10 +278,9 @@ modulate = Color(1, 1, 1, 0)
 position = Vector2(960, 540)
 sprite_frames = SubResource("SpriteFrames_6xu3q")
 autoplay = "default"
-frame_progress = 0.450177
+frame_progress = 0.865595
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
-stream = SubResource("AudioStreamPolyphonic_tc5j7")
 volume_db = -10.0
 autoplay = true
 
@@ -320,6 +289,7 @@ position = Vector2(2088, 549)
 sprite_frames = SubResource("SpriteFrames_4mjdc")
 animation = &"move left"
 autoplay = "move left"
+frame_progress = 0.32228
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
