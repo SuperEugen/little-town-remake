@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://bqnqr73fm0vbi"]
+[gd_scene load_steps=27 format=3 uid="uid://bqnqr73fm0vbi"]
 
 [ext_resource type="Texture2D" uid="uid://d0ijaxmtirsw1" path="res://assets/textures/bg/blueBG-1.png" id="1_tc5j7"]
 [ext_resource type="Texture2D" uid="uid://r81yecu7ch" path="res://assets/textures/bg/blueBG-2.png" id="2_7umlp"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cdniyq0f66dkx" path="res://assets/textures/npcs/baker/spr_baker_walk_left_strip04.png" id="6_e8828"]
 [ext_resource type="Texture2D" uid="uid://cor1sfc6lhjhy" path="res://assets/textures/npcs/baker/spr_baker_sad_strip04.png" id="7_6xu3q"]
 [ext_resource type="AudioStream" uid="uid://holsu0k8tbuo" path="res://assets/audio/snd_seq_good01_BGM.wav" id="7_vo2w1"]
+[ext_resource type="AudioStream" uid="uid://q83hn8i2swrp" path="res://assets/audio/snd_seq_bad01_BGM.wav" id="8_4mjdc"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6xu3q"]
 animations = [{
@@ -181,6 +182,21 @@ tracks/3/keys = {
 "update": 0,
 "values": [-10.0, -10.0, -40.0]
 }
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Music")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("8_4mjdc")
+}],
+"times": PackedFloat32Array(0.166667)
+}
+tracks/4/use_blend = true
 
 [sub_resource type="Animation" id="Animation_rp7jh"]
 resource_name = "cutscene"
@@ -278,7 +294,7 @@ modulate = Color(1, 1, 1, 0)
 position = Vector2(960, 540)
 sprite_frames = SubResource("SpriteFrames_6xu3q")
 autoplay = "default"
-frame_progress = 0.865595
+frame_progress = 0.455762
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
 volume_db = -10.0
@@ -289,7 +305,7 @@ position = Vector2(2088, 549)
 sprite_frames = SubResource("SpriteFrames_4mjdc")
 animation = &"move left"
 autoplay = "move left"
-frame_progress = 0.32228
+frame_progress = 0.0918177
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

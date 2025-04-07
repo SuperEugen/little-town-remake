@@ -181,6 +181,21 @@ tracks/3/keys = {
 "update": 1,
 "values": [&"move left", &"dance", &"move left"]
 }
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Music")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("7_rp7jh")
+}],
+"times": PackedFloat32Array(0.166667)
+}
+tracks/4/use_blend = true
 
 [sub_resource type="Animation" id="Animation_rp7jh"]
 resource_name = "cutscene"
@@ -278,7 +293,7 @@ modulate = Color(1, 1, 1, 0)
 position = Vector2(960, 540)
 sprite_frames = SubResource("SpriteFrames_3gf5k")
 autoplay = "default"
-frame_progress = 0.00510438
+frame_progress = 0.751788
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
 volume_db = -10.0
@@ -288,7 +303,7 @@ position = Vector2(2100, 549)
 sprite_frames = SubResource("SpriteFrames_i1xix")
 animation = &"move left"
 autoplay = "move left"
-frame_progress = 0.228517
+frame_progress = 0.677697
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
