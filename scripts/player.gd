@@ -11,7 +11,8 @@ enum DIR {LEFT, RIGHT, UP, DOWN}
 
 @onready var animSprite: AnimatedSprite2D = $AnimatedSprite2D
 
-var actionPossible := false					# i.e. talking or picking up an item
+var actionPossible: bool = false			# i.e. talking or picking up an item
+
 var detectedBody: Node2D = null
 var dialogActive = false
 var hasItem: Node2D = null
@@ -21,16 +22,17 @@ var playerDirection: DIR = DIR.DOWN
 
 func _ready() -> void:
 	playerState = STATE.IDLE
+	Global.playerCanMove = true
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
 		get_tree().quit()
-
+	if Input.is_action_just_pressed("test"):
+		Global.showCutscene("bakerHappy")
+	
 func _physics_process(delta: float) -> void:
 	# don't move during dialog
-	if !dialogActive && \
-		playerState != STATE.PICKING_UP && \
-		playerState != STATE.PUTTING_DOWN:
+	if Global.playerCanMove:
 		var dirInput := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 		
 		if dirInput == Vector2.ZERO:
@@ -77,6 +79,7 @@ func _physics_process(delta: float) -> void:
 					Global.fadeInDialog(detectedBody, detectedBody.npcText)
 			elif detectedBody is Item:
 				if hasItem == null:
+					Global.playerCanMove = false
 					playerState = STATE.PICKING_UP
 					velocity = Vector2.ZERO
 					hasItem = detectedBody
@@ -86,6 +89,7 @@ func _physics_process(delta: float) -> void:
 					Global.playSFX(Global.SFX.PICK_UP)
 					# when animation finished state will be changed to carry idle
 				else:
+					Global.playerCanMove = false
 					playerState = STATE.PUTTING_DOWN
 					velocity = Vector2.ZERO
 					carryLimit = 1.0
@@ -93,9 +97,6 @@ func _physics_process(delta: float) -> void:
 					hasItem = null
 					Global.playSFX(Global.SFX.PUT_DOWN)
 					# when animation finished state will be changed to idle					
-	
-	if Input.is_action_just_pressed("test"):
-		Global.show
 	
 	animatePlayer()
 	move_and_slide()
@@ -137,8 +138,10 @@ func _on_awareness_body_exited(body: Node2D) -> void:
 func _on_animated_sprite_2d_animation_finished() -> void:
 	if playerState == STATE.PICKING_UP:
 		playerState = STATE.CARRY_IDLE
+		Global.playerCanMove = true
 	if playerState == STATE.PUTTING_DOWN:
 		playerState = STATE.IDLE
+		Global.playerCanMove = true
 
 func animatePlayer() -> void:
 	var animPrefix: String = ""
@@ -169,6 +172,3 @@ func animatePlayer() -> void:
 			animPostfix = "Down"
 	
 	animSprite.play(animPrefix + animPostfix)
-
-func _sceneFinished() -> void:
-	pass

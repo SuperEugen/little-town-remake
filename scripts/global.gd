@@ -1,10 +1,10 @@
 extends Node
 
-var sfxGreeting: Resource = preload("res://assets/audio/snd_greeting01.wav")
-var sfxPickUp: Resource = preload("res://assets/audio/snd_itemPickup.wav")
-var sfxPutDown: Resource = preload("res://assets/audio/snd_itemPutDown.wav")
-var sfxDialogOpen: Resource = preload("res://assets/audio/snd_pop01.wav")
-var sfxPromptOpen: Resource = preload("res://assets/audio/snd_pop02.wav")
+var sfxGreeting: Resource = preload("res://assets/audio/Hallöle.wav")
+var sfxPickUp: Resource = preload("res://assets/audio/Aufnehmen.wav")
+var sfxPutDown: Resource = preload("res://assets/audio/Ablegen.wav")
+var sfxDialogOpen: Resource = preload("res://assets/audio/Plop.wav")
+var sfxPromptOpen: Resource = preload("res://assets/audio/Klick.wav")
 
 enum SFX {GREETING, PICK_UP, PUT_DOWN, DIALOG_OPEN, PROMPT_OPEN}
 
@@ -18,6 +18,16 @@ var promptInstance: Node  = null
 
 var dustCloudScene: Resource = preload("res://scenes/dust_cloud.tscn")
 var dustCloudInstance: Node = null
+
+var cutsceneBakerHappy: Resource = preload("res://scenes/cutscene_baker_happy.tscn")
+var cutsceneBakerSad: Resource = preload("res://scenes/cutscene_baker_sad.tscn")
+var cutsceneGrocerHappy: Resource = preload("res://scenes/cutscene_grocer_happy.tscn")
+var cutsceneGrocerSad: Resource = preload("res://scenes/cutscene_grocer_sad.tscn")
+var cutsceneTeacherHappy: Resource = preload("res://scenes/cutscene_teacher_happy.tscn")
+var cutsceneTeacherSad: Resource = preload("res://scenes/cutscene_teacher_sad.tscn")
+var cutsceneInstance: Node = null
+
+var playerCanMove: bool = true
 
 func playSFX(sfx: SFX) -> void:
 	var asp := AudioStreamPlayer.new()
@@ -44,6 +54,7 @@ func playSFX(sfx: SFX) -> void:
 	asp.queue_free()
 
 func fadeInDialog(char: CharacterBody2D, dialog: String) -> void:
+	playerCanMove = false
 	Global.playSFX(Global.SFX.DIALOG_OPEN)
 	
 	dialogInstance = dialogScene.instantiate()
@@ -60,6 +71,7 @@ func fadeOutDialog(char: CharacterBody2D) -> void:
 	var tween = dialogInstance.create_tween()
 	tween.tween_property(dialogInstance, "modulate", Color.TRANSPARENT, fadeSpeed)
 	tween.tween_callback(dialogInstance.queue_free)
+	playerCanMove = true
 
 func fadeInPrompt(char: CharacterBody2D) -> void:
 	Global.playSFX(Global.SFX.PROMPT_OPEN)
@@ -103,4 +115,20 @@ func createDustCloud(char: CharacterBody2D) -> void:
 	char.add_sibling(dustCloudInstance)
 
 func showCutscene(name: String) -> void:
-	pass
+	playerCanMove = false
+	
+	match name:
+		"bakerHappy":
+			cutsceneInstance = cutsceneBakerHappy.instantiate()
+		"bakerSad":
+			cutsceneInstance = cutsceneBakerSad.instantiate()
+		"grocerHappy":
+			cutsceneInstance = cutsceneGrocerHappy.instantiate()
+		"grocerSad":
+			cutsceneInstance = cutsceneGrocerSad.instantiate()
+		"teacherHappy":
+			cutsceneInstance = cutsceneTeacherHappy.instantiate()
+		"teacherSad":
+			cutsceneInstance = cutsceneTeacherSad.instantiate()
+	
+	get_node("/root/Town/Cutscenes").add_child(cutsceneInstance)

@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://c5k0e28k3tq50"
-path="res://.godot/imported/snd_pop01.wav-2823c3c40c44a71430b8b4594a12cab1.sample"
+uid="uid://cqaxe7trk3v84"
+path="res://.godot/imported/Hallöle.wav-e36aca92c833efe62b52b1b67848c2b3.sample"
 
 [deps]
 
-source_file="res://assets/audio/snd_pop01.wav"
-dest_files=["res://.godot/imported/snd_pop01.wav-2823c3c40c44a71430b8b4594a12cab1.sample"]
+source_file="res://assets/audio/Hallöle.wav"
+dest_files=["res://.godot/imported/Hallöle.wav-e36aca92c833efe62b52b1b67848c2b3.sample"]
 
 [params]
 
