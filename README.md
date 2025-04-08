@@ -32,7 +32,7 @@ Original Tutorial: https://gamemaker.io/de/tutorials/little-town-gamemaker-tutor
 
 ## :framed_picture: Assets
 - **Tilesheet**: YoYo Games
-- **Sprite**: YoYo Games
+- **Sprites**: YoYo Games
 - **UI**: YoYo Games
 - **Music**: AudioHero
 - **SFX**: SuperEugen
