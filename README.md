@@ -35,7 +35,7 @@ Original Tutorial: https://gamemaker.io/de/tutorials/little-town-gamemaker-tutor
 - **Sprite**: YoYo Games
 - **UI**: YoYo Games
 - **Music**: AudioHero
-- **SFX**: AudioHero
+- **SFX**: SuperEugen
 
 ## :man_teacher: Learning Ressources
 - Official Godot tutorial: [Your first 2D Game](https://docs.godotengine.org/en/stable/getting_started/first_2d_game/index.html)
