@@ -131,4 +131,6 @@ func showCutscene(name: String) -> void:
 		"teacherSad":
 			cutsceneInstance = cutsceneTeacherSad.instantiate()
 	
+	cutsceneInstance.global_position = Vector2(960, 540)
+	
 	get_node("/root/Town/Cutscenes").add_child(cutsceneInstance)
