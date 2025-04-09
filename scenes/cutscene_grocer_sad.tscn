@@ -27,7 +27,7 @@ animations = [{
 "speed": 8.0
 }]
 
-[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_mk63r"]
+[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_bwvnf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a0h4s"]
 atlas = ExtResource("4_d048l")
@@ -302,7 +302,7 @@ _data = {
 &"cutscene": SubResource("Animation_rp7jh")
 }
 
-[node name="cutsceneGrocerSad" type="Node2D"]
+[node name="cutsceneGrocerSad" type="CanvasLayer"]
 script = ExtResource("1_bwvnf")
 
 [node name="BG" type="AnimatedSprite2D" parent="."]
@@ -312,7 +312,7 @@ sprite_frames = SubResource("SpriteFrames_bnt6w")
 autoplay = "default"
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
-stream = SubResource("AudioStreamPolyphonic_mk63r")
+stream = SubResource("AudioStreamPolyphonic_bwvnf")
 volume_db = -10.0
 
 [node name="Grocer" type="AnimatedSprite2D" parent="."]

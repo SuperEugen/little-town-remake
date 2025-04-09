@@ -288,7 +288,7 @@ _data = {
 &"cutscene": SubResource("Animation_rp7jh")
 }
 
-[node name="cutsceneBakerSad" type="Node2D"]
+[node name="cutsceneBakerSad" type="CanvasLayer"]
 script = ExtResource("1_7umlp")
 
 [node name="BG" type="AnimatedSprite2D" parent="."]
