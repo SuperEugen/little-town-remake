@@ -48,4 +48,4 @@ Original Tutorial: https://gamemaker.io/de/tutorials/little-town-gamemaker-tutor
 - Y-sorting can be automated in Godot.
 - User interface in Godot is classic editor with properties pane, in GameMaker editor windowas are laid out on an endless canvas which is more difficult to navigate.
 - GameMaker is easier to start with but Godot offers more posibilities with extra layers of complexity.
-- GameMaker sequences translate to Godot AnimationPlayer animations. To see them on top of the screen
+- GameMaker sequences translate to Godot AnimationPlayer animations. To see them on top of the screen one has to use Control nodes and CanvasLayer nodes.
