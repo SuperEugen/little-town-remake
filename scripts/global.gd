@@ -29,6 +29,9 @@ var cutsceneInstance: Node = null
 
 var playerCanMove: bool = true
 
+@onready var musicPlayer: AudioStreamPlayer = get_node("/root/Town/BGMusic")
+@onready var ambiencePlayer: AudioStreamPlayer = get_node("/root/Town/BGAmbience")
+
 func playSFX(sfx: SFX) -> void:
 	var asp := AudioStreamPlayer.new()
 	var stream: Resource = null
@@ -114,8 +117,11 @@ func createDustCloud(char: CharacterBody2D) -> void:
 	
 	char.add_sibling(dustCloudInstance)
 
-func showCutscene(name: String) -> void:
+func showCutscene(name: String) -> void:	
 	playerCanMove = false
+	
+	musicPlayer.set_stream_paused(true)
+	ambiencePlayer.set_stream_paused(true)
 	
 	match name:
 		"bakerHappy":
@@ -132,3 +138,10 @@ func showCutscene(name: String) -> void:
 			cutsceneInstance = cutsceneTeacherSad.instantiate()
 	
 	get_node("/root/Town/Cutscenes").add_child(cutsceneInstance)
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	cutsceneInstance.queue_free()
+	Global.playerCanMove = true
+	print("Audio should continue")
+	musicPlayer.set_stream_paused(false)
+	ambiencePlayer.set_stream_paused(false)
