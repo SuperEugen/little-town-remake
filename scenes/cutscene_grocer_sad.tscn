@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://cjb0khbfsxkp4"]
+[gd_scene load_steps=27 format=3 uid="uid://cjb0khbfsxkp4"]
 
 [ext_resource type="Script" uid="uid://ctbarts0le8sf" path="res://scripts/cutscenes.gd" id="1_bwvnf"]
 [ext_resource type="Texture2D" uid="uid://cob2eknwlb2y4" path="res://assets/textures/bg/redBG-1.png" id="1_xmdc6"]
@@ -7,8 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://ci5e1ilbg6ul" path="res://assets/textures/npcs/grocer/spr_grocer_happy_strip04.png" id="4_d048l"]
 [ext_resource type="Texture2D" uid="uid://b6eeu3uuh1rb2" path="res://assets/textures/npcs/grocer/spr_grocer_walk_left_strip04.png" id="5_73jbd"]
 [ext_resource type="Texture2D" uid="uid://bf2mhc0ddfjqw" path="res://assets/textures/npcs/grocer/spr_grocer_sad_strip04.png" id="6_mw57e"]
-[ext_resource type="AudioStream" uid="uid://dynske8io0bkv" path="res://assets/audio/snd_seq_bad02_BGM.wav" id="7_lecy2"]
-[ext_resource type="AudioStream" uid="uid://holsu0k8tbuo" path="res://assets/audio/snd_seq_good01_BGM.wav" id="8_voc8d"]
+[ext_resource type="AudioStream" uid="uid://dynske8io0bkv" path="res://assets/audio/snd_seq_bad02_BGM.wav" id="8_xmdc6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bnt6w"]
 animations = [{
@@ -26,8 +25,6 @@ animations = [{
 "name": &"default",
 "speed": 8.0
 }]
-
-[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_bwvnf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a0h4s"]
 atlas = ExtResource("4_d048l")
@@ -191,13 +188,9 @@ tracks/4/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("7_lecy2")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": null
+"stream": ExtResource("8_xmdc6")
 }],
-"times": PackedFloat32Array(0, 0.0001)
+"times": PackedFloat32Array(0)
 }
 tracks/4/use_blend = true
 tracks/5/type = "value"
@@ -207,10 +200,10 @@ tracks/5/path = NodePath("Music:volume_db")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 3.36667, 4),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(3, 4),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [-10.0, -10.0, -42.416]
+"values": [0.0, -41.195]
 }
 
 [sub_resource type="Animation" id="Animation_rp7jh"]
@@ -240,56 +233,25 @@ tracks/1/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
-tracks/2/type = "audio"
+tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Music")
+tracks/2/path = NodePath("Grocer:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("8_voc8d")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": null
-}],
-"times": PackedFloat32Array(0, 4)
-}
-tracks/2/use_blend = true
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Music:volume_db")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.233333, 3.53333, 4),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [-40.349, -10.0, -10.0, -41.066]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Grocer:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
 "times": PackedFloat32Array(0, 1, 3.36667, 4),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(2088, 549), Vector2(960, 549), Vector2(960, 549), Vector2(-100, 549)]
 }
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Grocer:animation")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Grocer:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
 "times": PackedFloat32Array(0, 1, 3.36667),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
@@ -302,6 +264,8 @@ _data = {
 &"cutscene": SubResource("Animation_rp7jh")
 }
 
+[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_bwvnf"]
+
 [node name="cutsceneGrocerSad" type="CanvasLayer"]
 script = ExtResource("1_bwvnf")
 
@@ -310,10 +274,6 @@ modulate = Color(1, 1, 1, 0)
 position = Vector2(960, 540)
 sprite_frames = SubResource("SpriteFrames_bnt6w")
 autoplay = "default"
-
-[node name="Music" type="AudioStreamPlayer2D" parent="."]
-stream = SubResource("AudioStreamPolyphonic_bwvnf")
-volume_db = -10.0
 
 [node name="Grocer" type="AnimatedSprite2D" parent="."]
 position = Vector2(2088, 549)
@@ -327,5 +287,8 @@ libraries = {
 &"": SubResource("AnimationLibrary_4u03q")
 }
 autoplay = "RESET"
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamPolyphonic_bwvnf")
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

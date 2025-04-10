@@ -138,10 +138,3 @@ func showCutscene(name: String) -> void:
 			cutsceneInstance = cutsceneTeacherSad.instantiate()
 	
 	get_node("/root/Town/Cutscenes").add_child(cutsceneInstance)
-
-func _on_animation_player_animation_finished(anim_name: StringName) -> void:
-	cutsceneInstance.queue_free()
-	Global.playerCanMove = true
-	print("Audio should continue")
-	musicPlayer.set_stream_paused(false)
-	ambiencePlayer.set_stream_paused(false)

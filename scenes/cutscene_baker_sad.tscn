@@ -8,8 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bh60a1h2goucn" path="res://assets/textures/npcs/baker/spr_baker_happy_strip04.png" id="5_my0du"]
 [ext_resource type="Texture2D" uid="uid://cdniyq0f66dkx" path="res://assets/textures/npcs/baker/spr_baker_walk_left_strip04.png" id="6_e8828"]
 [ext_resource type="Texture2D" uid="uid://cor1sfc6lhjhy" path="res://assets/textures/npcs/baker/spr_baker_sad_strip04.png" id="7_6xu3q"]
-[ext_resource type="AudioStream" uid="uid://holsu0k8tbuo" path="res://assets/audio/snd_seq_good01_BGM.wav" id="7_vo2w1"]
-[ext_resource type="AudioStream" uid="uid://q83hn8i2swrp" path="res://assets/audio/snd_seq_bad01_BGM.wav" id="8_4mjdc"]
+[ext_resource type="AudioStream" uid="uid://q83hn8i2swrp" path="res://assets/audio/snd_seq_bad01_BGM.wav" id="9_tc5j7"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6xu3q"]
 animations = [{
@@ -171,33 +170,33 @@ tracks/2/keys = {
 "update": 1,
 "values": [&"move left", &"sad", &"move left"]
 }
-tracks/3/type = "value"
+tracks/3/type = "audio"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Music:volume_db")
+tracks/3/path = NodePath("AudioStreamPlayer")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 3.36667, 4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [-10.0, -10.0, -40.0]
-}
-tracks/4/type = "audio"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Music")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("8_4mjdc")
+"stream": ExtResource("9_tc5j7")
 }],
-"times": PackedFloat32Array(0.166667)
+"times": PackedFloat32Array(0)
 }
-tracks/4/use_blend = true
+tracks/3/use_blend = true
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AudioStreamPlayer:volume_db")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(3, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -39.844]
+}
 
 [sub_resource type="Animation" id="Animation_rp7jh"]
 resource_name = "cutscene"
@@ -226,56 +225,25 @@ tracks/1/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
-tracks/2/type = "audio"
+tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Music")
+tracks/2/path = NodePath("Baker:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("7_vo2w1")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": null
-}],
-"times": PackedFloat32Array(0, 4)
-}
-tracks/2/use_blend = true
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Music:volume_db")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.233333, 3.53333, 4),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [-40.349, -10.0, -10.0, -41.066]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Baker:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
 "times": PackedFloat32Array(0, 1, 3.36667, 4),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(2088, 549), Vector2(960, 549), Vector2(960, 549), Vector2(-100, 549)]
 }
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Baker:animation")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Baker:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
 "times": PackedFloat32Array(0, 1, 3.36667),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
@@ -288,6 +256,8 @@ _data = {
 &"cutscene": SubResource("Animation_rp7jh")
 }
 
+[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_7umlp"]
+
 [node name="cutsceneBakerSad" type="CanvasLayer"]
 script = ExtResource("1_7umlp")
 
@@ -297,21 +267,19 @@ position = Vector2(960, 540)
 sprite_frames = SubResource("SpriteFrames_6xu3q")
 autoplay = "default"
 
-[node name="Music" type="AudioStreamPlayer2D" parent="."]
-volume_db = -10.0
-autoplay = true
-
 [node name="Baker" type="AnimatedSprite2D" parent="."]
 position = Vector2(2088, 549)
 sprite_frames = SubResource("SpriteFrames_4mjdc")
 animation = &"move left"
 autoplay = "move left"
-frame_progress = 0.171566
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_4u03q")
 }
 autoplay = "RESET"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamPolyphonic_7umlp")
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

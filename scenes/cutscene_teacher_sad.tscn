@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://b11n38sgdi8mr"]
+[gd_scene load_steps=26 format=3 uid="uid://b11n38sgdi8mr"]
 
 [ext_resource type="Script" uid="uid://ctbarts0le8sf" path="res://scripts/cutscenes.gd" id="1_dtfip"]
 [ext_resource type="Texture2D" uid="uid://cob2eknwlb2y4" path="res://assets/textures/bg/redBG-1.png" id="1_ne3mw"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://dlgsxf2jmjb87" path="res://assets/textures/npcs/teacher/spr_teacher_walk_left_strip04.png" id="6_sa2st"]
 [ext_resource type="Texture2D" uid="uid://brhi4qn2kdgx6" path="res://assets/textures/npcs/teacher/spr_teacher_angry_strip04.png" id="7_igi7b"]
 [ext_resource type="AudioStream" uid="uid://ccdjusjl3hqas" path="res://assets/audio/snd_seq_bad03_BGM.wav" id="7_ne3mw"]
-[ext_resource type="AudioStream" uid="uid://holsu0k8tbuo" path="res://assets/audio/snd_seq_good01_BGM.wav" id="9_pb3q1"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6xu3q"]
 animations = [{
@@ -27,7 +26,7 @@ animations = [{
 "speed": 8.0
 }]
 
-[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_dtfip"]
+[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_ne3mw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ofng5"]
 atlas = ExtResource("5_vmbba")
@@ -177,7 +176,7 @@ tracks/3/keys = {
 tracks/4/type = "audio"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Music")
+tracks/4/path = NodePath("AudioStreamPlayer")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -192,14 +191,14 @@ tracks/4/use_blend = true
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Music:volume_db")
+tracks/5/path = NodePath("AudioStreamPlayer:volume_db")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 3.36667, 4),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(3.7, 4),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [-10.0, -10.0, -42.416]
+"values": [0.0, -41.195]
 }
 
 [sub_resource type="Animation" id="Animation_rp7jh"]
@@ -229,56 +228,25 @@ tracks/1/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
-tracks/2/type = "audio"
+tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Music")
+tracks/2/path = NodePath("Teacher:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("9_pb3q1")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": null
-}],
-"times": PackedFloat32Array(0, 4)
-}
-tracks/2/use_blend = true
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Music:volume_db")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.233333, 3.53333, 4),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [-40.349, -10.0, -10.0, -41.066]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Teacher:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
 "times": PackedFloat32Array(0, 1, 3.36667, 4),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(2088, 549), Vector2(960, 549), Vector2(960, 549), Vector2(-100, 549)]
 }
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Teacher:animation")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Teacher:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
 "times": PackedFloat32Array(0, 1, 3.36667),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
@@ -300,9 +268,8 @@ position = Vector2(960, 540)
 sprite_frames = SubResource("SpriteFrames_6xu3q")
 autoplay = "default"
 
-[node name="Music" type="AudioStreamPlayer2D" parent="."]
-stream = SubResource("AudioStreamPolyphonic_dtfip")
-volume_db = -10.0
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamPolyphonic_ne3mw")
 
 [node name="Teacher" type="AnimatedSprite2D" parent="."]
 position = Vector2(2088, 549)
