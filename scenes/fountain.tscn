@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://doxdr74hckhem"]
 
 [ext_resource type="Texture2D" uid="uid://buvupdat3fx0" path="res://assets/textures/town/spr_fountain_strip05.png" id="1_50hkb"]
-[ext_resource type="AudioStream" uid="uid://cgfw4iel1gnft" path="res://assets/audio/snd_fountain.wav" id="2_m72p2"]
+[ext_resource type="AudioStream" uid="uid://cgfw4iel1gnft" path="res://assets/sfx/snd_fountain.wav" id="2_m72p2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m72p2"]
 atlas = ExtResource("1_50hkb")

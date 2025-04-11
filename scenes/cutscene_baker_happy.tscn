@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bh60a1h2goucn" path="res://assets/textures/npcs/baker/spr_baker_happy_strip04.png" id="5_8wqx2"]
 [ext_resource type="Texture2D" uid="uid://cdniyq0f66dkx" path="res://assets/textures/npcs/baker/spr_baker_walk_left_strip04.png" id="6_3gf5k"]
 [ext_resource type="Texture2D" uid="uid://cor1sfc6lhjhy" path="res://assets/textures/npcs/baker/spr_baker_sad_strip04.png" id="7_3gf5k"]
-[ext_resource type="AudioStream" uid="uid://holsu0k8tbuo" path="res://assets/audio/snd_seq_good01_BGM.wav" id="7_rp7jh"]
+[ext_resource type="AudioStream" uid="uid://holsu0k8tbuo" path="res://assets/music/snd_seq_good01_BGM.wav" id="7_rp7jh"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3gf5k"]
 animations = [{

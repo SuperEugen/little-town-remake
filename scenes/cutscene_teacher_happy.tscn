@@ -7,8 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://dqcoaoyafvtxa" path="res://assets/textures/bg/greenBG-4.png" id="4_rtiv6"]
 [ext_resource type="Texture2D" uid="uid://bti0hmqhg12bm" path="res://assets/textures/npcs/teacher/spr_teacher_happy_strip03.png" id="5_yp1kc"]
 [ext_resource type="Texture2D" uid="uid://dlgsxf2jmjb87" path="res://assets/textures/npcs/teacher/spr_teacher_walk_left_strip04.png" id="6_udwp0"]
-[ext_resource type="Texture2D" uid="uid://brhi4qn2kdgx6" path="res://assets/textures/npcs/teacher/spr_teacher_angry_strip04.png" id="7_a5as0"]
-[ext_resource type="AudioStream" uid="uid://by87hkjbu1kmf" path="res://assets/audio/snd_seq_good03_BGM.wav" id="9_6lmxm"]
+[ext_resource type="Texture2D" uid="uid://cvs6lrydp7dwx" path="res://assets/textures/npcs/teacher/spr_teacher_sad_strip04.png" id="8_6lmxm"]
+[ext_resource type="AudioStream" uid="uid://by87hkjbu1kmf" path="res://assets/music/snd_seq_good03_BGM.wav" id="9_6lmxm"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6xu3q"]
 animations = [{
@@ -58,20 +58,20 @@ region = Rect2(490, 0, 245, 460)
 atlas = ExtResource("6_udwp0")
 region = Rect2(735, 0, 245, 460)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_v3twt"]
-atlas = ExtResource("7_a5as0")
+[sub_resource type="AtlasTexture" id="AtlasTexture_uf0oy"]
+atlas = ExtResource("8_6lmxm")
 region = Rect2(0, 0, 245, 460)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0cuqa"]
-atlas = ExtResource("7_a5as0")
+[sub_resource type="AtlasTexture" id="AtlasTexture_lvt7r"]
+atlas = ExtResource("8_6lmxm")
 region = Rect2(245, 0, 245, 460)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ya4al"]
-atlas = ExtResource("7_a5as0")
+[sub_resource type="AtlasTexture" id="AtlasTexture_rtiv6"]
+atlas = ExtResource("8_6lmxm")
 region = Rect2(490, 0, 245, 460)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4c8wn"]
-atlas = ExtResource("7_a5as0")
+[sub_resource type="AtlasTexture" id="AtlasTexture_yp1kc"]
+atlas = ExtResource("8_6lmxm")
 region = Rect2(735, 0, 245, 460)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4mjdc"]
@@ -109,16 +109,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_v3twt")
+"texture": SubResource("AtlasTexture_uf0oy")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0cuqa")
+"texture": SubResource("AtlasTexture_lvt7r")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ya4al")
+"texture": SubResource("AtlasTexture_rtiv6")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4c8wn")
+"texture": SubResource("AtlasTexture_yp1kc")
 }],
 "loop": true,
 "name": &"sad",
@@ -261,7 +261,7 @@ _data = {
 &"cutscene": SubResource("Animation_rp7jh")
 }
 
-[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_uf0oy"]
+[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_udwp0"]
 
 [node name="cutsceneTeacherHappy" type="CanvasLayer"]
 script = ExtResource("1_uf0oy")
@@ -277,7 +277,6 @@ position = Vector2(2088, 549)
 sprite_frames = SubResource("SpriteFrames_4mjdc")
 animation = &"move left"
 autoplay = "move left"
-frame_progress = 0.347071
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -286,6 +285,6 @@ libraries = {
 autoplay = "RESET"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = SubResource("AudioStreamPolyphonic_uf0oy")
+stream = SubResource("AudioStreamPolyphonic_udwp0")
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

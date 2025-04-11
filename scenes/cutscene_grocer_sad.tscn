@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://ci5e1ilbg6ul" path="res://assets/textures/npcs/grocer/spr_grocer_happy_strip04.png" id="4_d048l"]
 [ext_resource type="Texture2D" uid="uid://b6eeu3uuh1rb2" path="res://assets/textures/npcs/grocer/spr_grocer_walk_left_strip04.png" id="5_73jbd"]
 [ext_resource type="Texture2D" uid="uid://bf2mhc0ddfjqw" path="res://assets/textures/npcs/grocer/spr_grocer_sad_strip04.png" id="6_mw57e"]
-[ext_resource type="AudioStream" uid="uid://dynske8io0bkv" path="res://assets/audio/snd_seq_bad02_BGM.wav" id="8_xmdc6"]
+[ext_resource type="AudioStream" uid="uid://dynske8io0bkv" path="res://assets/music/snd_seq_bad02_BGM.wav" id="8_xmdc6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bnt6w"]
 animations = [{

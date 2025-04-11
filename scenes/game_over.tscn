@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dqcoaoyafvtxa" path="res://assets/textures/bg/greenBG-4.png" id="4_8bugq"]
 [ext_resource type="Texture2D" uid="uid://c5qpkxyf2dww7" path="res://assets/textures/ui/spr_title_youDidIt.png" id="5_wawo4"]
 [ext_resource type="Texture2D" uid="uid://b020n1pewf1yk" path="res://assets/textures/ui/spr_title_thankYou.png" id="6_56v3a"]
-[ext_resource type="AudioStream" uid="uid://by8acokhtxp2n" path="res://assets/audio/snd_game_over.wav" id="7_irg28"]
+[ext_resource type="AudioStream" uid="uid://by8acokhtxp2n" path="res://assets/sfx/snd_game_over.wav" id="7_irg28"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_o57t2"]
 animations = [{
