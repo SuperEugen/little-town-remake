@@ -13,6 +13,8 @@ extends CharacterBody2D
 @export var cutsceneHappy: String = "npcHappy"
 @export var cutsceneSad: String = "npcSad"
 
+var npcDone: bool = false
+
 @onready var animSprite: AnimatedSprite2D = $AnimatedSprite2D
 var timerNode: Node = null
 
@@ -30,3 +32,9 @@ func _on_animation_finished() -> void:
 
 func _on_idle_timer_timeout() -> void:
 	animSprite.play("idleDown")
+
+func setHappy() -> void:
+	print("I am happy!")
+	timerNode.stop()
+	timerNode = null
+	$AnimatedSprite2D.play("happy")

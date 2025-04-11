@@ -28,7 +28,7 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
 		get_tree().quit()
 	if Input.is_action_just_pressed("test"):
-		Global.showCutscene("teacherSad")
+		pass	# Global.showCutscene("teacherSad")
 	
 func _physics_process(delta: float) -> void:
 	# don't move during dialog
@@ -68,16 +68,45 @@ func _physics_process(delta: float) -> void:
 	if actionPossible or hasItem != null:
 		if Input.is_action_just_pressed("space"):
 			if detectedBody is NPC:
-				if dialogActive:
-					Global.fadeOutDialog(detectedBody)
-					dialogActive = false
+				if hasItem == null:
+					if dialogActive:
+						Global.fadeOutDialog(detectedBody)
+						dialogActive = false
+					else:
+						playerState = STATE.IDLE
+						velocity = Vector2.ZERO
+						dialogActive = true
+						Global.fadeOutPrompt(self)
+						Global.fadeInDialog(detectedBody, detectedBody.npcText)
 				else:
-					playerState = STATE.IDLE
-					velocity = Vector2.ZERO
-					dialogActive = true
-					Global.fadeOutPrompt(self)
-					Global.fadeInDialog(detectedBody, detectedBody.npcText)
-			elif detectedBody is Item:
+					if hasItem == detectedBody.npcItem:
+						if dialogActive:
+							Global.fadeOutDialog(detectedBody)
+							dialogActive = false
+							detectedBody.npcDone = true
+							hasItem.queue_free()
+							carryLimit = 1.0
+							detectedBody.setHappy()
+							Global.showCutscene(detectedBody.cutsceneHappy)
+						else:
+							playerState = STATE.IDLE
+							velocity = Vector2.ZERO
+							dialogActive = true
+							Global.fadeOutPrompt(self)
+							Global.fadeInDialog(detectedBody, detectedBody.itemTextHappy)
+					else:
+						if dialogActive:
+							Global.fadeOutDialog(detectedBody)
+							dialogActive = false
+							Global.showCutscene(detectedBody.cutsceneSad)
+						else:
+							playerState = STATE.IDLE
+							velocity = Vector2.ZERO
+							dialogActive = true
+							Global.fadeOutPrompt(self)
+							Global.fadeInDialog(detectedBody, detectedBody.itemTextSad)
+
+			else:
 				if hasItem == null:
 					Global.playerCanMove = false
 					playerState = STATE.PICKING_UP
@@ -120,13 +149,16 @@ func _physics_process(delta: float) -> void:
 			# TODO: put item behind player
 
 func _on_awareness_body_entered(body: Node2D) -> void:
-	Global.fadeInPrompt(self)
-
-	detectedBody = body
-	actionPossible = true
-
 	if body is NPC:
-		Global.playSFX(Global.SFX.GREETING)
+		if !body.npcDone:
+			Global.fadeInPrompt(self)
+			detectedBody = body
+			actionPossible = true
+			Global.playSFX(Global.SFX.GREETING)
+	elif body is Item:
+		Global.fadeInPrompt(self)
+		detectedBody = body
+		actionPossible = true
 
 func _on_awareness_body_exited(body: Node2D) -> void:
 	detectedBody = null
