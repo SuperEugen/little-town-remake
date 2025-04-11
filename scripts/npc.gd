@@ -5,7 +5,13 @@ extends CharacterBody2D
 # seconds to wait for next idle animation
 @export var minIdleWait: float = 1.0
 @export var maxIdleWait: float = 5.0
-@export var npcText: String = "Howdy"
+@export var npcItem: Item = null
+@export var npcText: String = "Hint"
+@export var itemTextHappy: String = "Right"
+@export var itemTextSad: String = "Wrong"
+@export var itemTextDone: String = "Thank You!"
+@export var cutsceneHappy: String = "npcHappy"
+@export var cutsceneSad: String = "npcSad"
 
 @onready var animSprite: AnimatedSprite2D = $AnimatedSprite2D
 var timerNode: Node = null

@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://d1qos58qmfxst"]
+[gd_scene load_steps=27 format=4 uid="uid://d1qos58qmfxst"]
 
 [ext_resource type="PackedScene" uid="uid://rtl6bq6dgnn7" path="res://scenes/player.tscn" id="1_gt07c"]
 [ext_resource type="Texture2D" uid="uid://dpgg2sq77y0rp" path="res://assets/textures/bg/spr_townTiles.png" id="2_ms2es"]
@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://cgs0mxt8jrsao" path="res://scenes/fence.tscn" id="6_cq4yp"]
 [ext_resource type="PackedScene" uid="uid://doxdr74hckhem" path="res://scenes/fountain.tscn" id="7_cq4yp"]
 [ext_resource type="PackedScene" uid="uid://bctaux30bxsor" path="res://scenes/rock.tscn" id="8_5q1rr"]
-[ext_resource type="Script" uid="uid://ci0622025f5o5" path="res://scripts/npc.gd" id="11_b0eaf"]
 [ext_resource type="PackedScene" uid="uid://b8lbo2ywqydj6" path="res://scenes/baker.tscn" id="11_po04c"]
 [ext_resource type="PackedScene" uid="uid://cihnavf4q8vu" path="res://scenes/teacher.tscn" id="12_icc4n"]
 [ext_resource type="PackedScene" uid="uid://chctdl2gd8kcd" path="res://scenes/grocer.tscn" id="12_u4arb"]
@@ -281,28 +280,39 @@ position = Vector2(133, 2680)
 [node name="NPCs" type="Node2D" parent="Environment"]
 y_sort_enabled = true
 
-[node name="Baker" parent="Environment/NPCs" instance=ExtResource("11_po04c")]
+[node name="Baker" parent="Environment/NPCs" node_paths=PackedStringArray("npcItem") instance=ExtResource("11_po04c")]
 y_sort_enabled = true
 position = Vector2(3545, 346)
 collision_layer = 2
-script = ExtResource("11_b0eaf")
-minIdleWait = 4.0
-npcText = "Good Morning! What a lovely day!"
+npcItem = NodePath("../../Items/RollingPin")
+npcText = "I sure wish I had something to help me bake these pies."
+itemTextHappy = "Oh my goodness… Is that what I think it is!?"
+itemTextSad = "Hmmm, what’s that you have there?"
+itemTextDone = "Thank you! Now I can bake pies all day long!"
+cutsceneHappy = "bakerHappy"
+cutsceneSad = "bakerSad"
 
-[node name="Grocer" parent="Environment/NPCs" instance=ExtResource("12_u4arb")]
+[node name="Grocer" parent="Environment/NPCs" node_paths=PackedStringArray("npcItem") instance=ExtResource("12_u4arb")]
 y_sort_enabled = true
 position = Vector2(2633, 2135)
-script = ExtResource("11_b0eaf")
-minIdleWait = 2.0
-maxIdleWait = 4.0
-npcText = "Whoa, there! Slow down!"
+npcItem = NodePath("../../Items/WateringCan")
+npcText = "How am I going to keep these veggies fresh?"
+itemTextHappy = "Oh, a watering can! Of course, that's perfect!"
+itemTextSad = "What's that you have there?"
+itemTextDone = "With that watering can, now my veggies will be perfect!"
+cutsceneHappy = "grocerHappy"
+cutsceneSad = "grocerSad"
 
-[node name="Teacher" parent="Environment/NPCs" instance=ExtResource("12_icc4n")]
+[node name="Teacher" parent="Environment/NPCs" node_paths=PackedStringArray("npcItem") instance=ExtResource("12_icc4n")]
 y_sort_enabled = true
 position = Vector2(1021, 505)
-script = ExtResource("11_b0eaf")
-maxIdleWait = 3.0
-npcText = "Hello Little One. Shouldn't you be in school?"
+npcItem = NodePath("../../Items/Apple")
+npcText = "I wish I had something to eat before I teach this class."
+itemTextHappy = "Is that an apple!? How thoughtful of you!"
+itemTextSad = "Oh, um, what do you have there?"
+itemTextDone = "Thanks to you, I could teach all day!"
+cutsceneHappy = "teacherHappy"
+cutsceneSad = "teacherSad"
 
 [node name="Items" type="Node2D" parent="Environment"]
 y_sort_enabled = true

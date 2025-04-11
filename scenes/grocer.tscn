@@ -1,6 +1,7 @@
-[gd_scene load_steps=41 format=3 uid="uid://chctdl2gd8kcd"]
+[gd_scene load_steps=42 format=3 uid="uid://chctdl2gd8kcd"]
 
 [ext_resource type="Texture2D" uid="uid://ck054y3trb7me" path="res://assets/textures/npcs/grocer/spr_grocer_angry_strip04.png" id="1_4aben"]
+[ext_resource type="Script" uid="uid://ci0622025f5o5" path="res://scripts/npc.gd" id="1_quwb0"]
 [ext_resource type="Texture2D" uid="uid://ci5e1ilbg6ul" path="res://assets/textures/npcs/grocer/spr_grocer_happy_strip04.png" id="2_quwb0"]
 [ext_resource type="Texture2D" uid="uid://wyb5pqpn6igo" path="res://assets/textures/npcs/grocer/spr_grocer_idle_down_strip02.png" id="3_ggssu"]
 [ext_resource type="Texture2D" uid="uid://bf2mhc0ddfjqw" path="res://assets/textures/npcs/grocer/spr_grocer_sad_strip04.png" id="4_bi63y"]
@@ -268,6 +269,7 @@ height = 168.0
 
 [node name="Grocer" type="CharacterBody2D"]
 collision_layer = 2
+script = ExtResource("1_quwb0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, -1)
