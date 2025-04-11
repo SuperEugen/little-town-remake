@@ -163,11 +163,11 @@ autoplay = "default"
 frame_progress = 0.471482
 
 [node name="Congrats" type="Sprite2D" parent="."]
-position = Vector2(940, 400)
+position = Vector2(960, 400)
 texture = ExtResource("5_wawo4")
 
 [node name="ThankYou" type="Sprite2D" parent="."]
-position = Vector2(940, 720)
+position = Vector2(960, 720)
 texture = ExtResource("6_56v3a")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

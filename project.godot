@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Little Town Remake"
-run/main_scene="uid://d1qos58qmfxst"
+run/main_scene="uid://cygfyhwj4l5sj"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 

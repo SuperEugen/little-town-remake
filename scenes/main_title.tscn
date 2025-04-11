@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://cygfyhwj4l5sj"]
+
+[ext_resource type="Script" uid="uid://dt5wjbtby8cui" path="res://scenes/main_title.gd" id="1_pu10i"]
+[ext_resource type="Texture2D" uid="uid://cglbaw1s8s434" path="res://assets/textures/ui/spr_bg_mainTitle.png" id="1_r53bv"]
+[ext_resource type="Texture2D" uid="uid://bhoylw2ylvucp" path="res://assets/textures/ui/spr_title_mainLogo.png" id="2_pu10i"]
+[ext_resource type="Texture2D" uid="uid://bmho5umpj8dms" path="res://assets/textures/ui/spr_title_pressEnter.png" id="3_c1wte"]
+[ext_resource type="AudioStream" uid="uid://holsu0k8tbuo" path="res://assets/music/snd_seq_good01_BGM.wav" id="5_c1wte"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_pu10i")
+
+[node name="BG" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="BG"]
+motion_mirroring = Vector2(720, 743)
+
+[node name="Sprite2D" type="Sprite2D" parent="BG/ParallaxLayer"]
+texture_repeat = 2
+texture = ExtResource("1_r53bv")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 1920, 1080)
+
+[node name="MainLogo" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_pu10i")
+
+[node name="PressEnter" type="Sprite2D" parent="."]
+position = Vector2(960, 992)
+texture = ExtResource("3_c1wte")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_c1wte")
+autoplay = true
