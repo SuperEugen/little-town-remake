@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://jhxt0qg3h61e"
-path="res://.godot/imported/Ablegen.wav-41a9e590b0b3567302722cfa9dcbaeb6.sample"
+path="res://.godot/imported/snd_put_down.wav-be32b2947118bc6a5c2229ff0fdc6f6a.sample"
 
 [deps]
 
-source_file="res://assets/audio/Ablegen.wav"
-dest_files=["res://.godot/imported/Ablegen.wav-41a9e590b0b3567302722cfa9dcbaeb6.sample"]
+source_file="res://assets/audio/snd_put_down.wav"
+dest_files=["res://.godot/imported/snd_put_down.wav-be32b2947118bc6a5c2229ff0fdc6f6a.sample"]
 
 [params]
 

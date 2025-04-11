@@ -1,10 +1,10 @@
 extends Node
 
-var sfxGreeting: Resource = preload("res://assets/audio/Hallöle.wav")
-var sfxPickUp: Resource = preload("res://assets/audio/Aufnehmen.wav")
-var sfxPutDown: Resource = preload("res://assets/audio/Ablegen.wav")
-var sfxDialogOpen: Resource = preload("res://assets/audio/Plop.wav")
-var sfxPromptOpen: Resource = preload("res://assets/audio/Klick.wav")
+var sfxGreeting: Resource = preload("res://assets/audio/snd_greeting.wav")
+var sfxPickUp: Resource = preload("res://assets/audio/snd_pick_up.wav")
+var sfxPutDown: Resource = preload("res://assets/audio/snd_put_down.wav")
+var sfxDialogOpen: Resource = preload("res://assets/audio/snd_plop.wav")
+var sfxPromptOpen: Resource = preload("res://assets/audio/snd_click.wav")
 
 enum SFX {GREETING, PICK_UP, PUT_DOWN, DIALOG_OPEN, PROMPT_OPEN}
 

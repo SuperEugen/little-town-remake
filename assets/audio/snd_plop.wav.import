@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bulrqjqg51npv"
-path="res://.godot/imported/Plop.wav-61d1ac37cd524f5aa1f6ec04f410a4fc.sample"
+path="res://.godot/imported/snd_plop.wav-a5377c440e7be76aa9722236b07d4bb9.sample"
 
 [deps]
 
-source_file="res://assets/audio/Plop.wav"
-dest_files=["res://.godot/imported/Plop.wav-61d1ac37cd524f5aa1f6ec04f410a4fc.sample"]
+source_file="res://assets/audio/snd_plop.wav"
+dest_files=["res://.godot/imported/snd_plop.wav-a5377c440e7be76aa9722236b07d4bb9.sample"]
 
 [params]
 
