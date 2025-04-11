@@ -34,7 +34,6 @@ func _on_idle_timer_timeout() -> void:
 	animSprite.play("idleDown")
 
 func setHappy() -> void:
-	print("I am happy!")
 	timerNode.stop()
 	timerNode = null
 	$AnimatedSprite2D.play("happy")

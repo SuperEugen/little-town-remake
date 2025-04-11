@@ -2,6 +2,9 @@ extends CanvasLayer
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	queue_free()
-	Global.playerCanMove = true
-	Global.musicPlayer.set_stream_paused(false)
-	Global.ambiencePlayer.set_stream_paused(false)
+	if Global.gameOver:
+		Global.showCutscene("gameOver")
+	else:
+		Global.playerCanMove = true
+		Global.musicPlayer.set_stream_paused(false)
+		Global.ambiencePlayer.set_stream_paused(false)

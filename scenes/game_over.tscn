@@ -1,0 +1,177 @@
+[gd_scene load_steps=12 format=3 uid="uid://hxjpjshs31c4"]
+
+[ext_resource type="Texture2D" uid="uid://ea1w30s156ae" path="res://assets/textures/bg/greenBG-1.png" id="1_v3hpu"]
+[ext_resource type="Texture2D" uid="uid://b0glbp8iyin2s" path="res://assets/textures/bg/greenBG-2.png" id="2_irg28"]
+[ext_resource type="Texture2D" uid="uid://v836swnmapkg" path="res://assets/textures/bg/greenBG-3.png" id="3_2jtsn"]
+[ext_resource type="Texture2D" uid="uid://dqcoaoyafvtxa" path="res://assets/textures/bg/greenBG-4.png" id="4_8bugq"]
+[ext_resource type="Texture2D" uid="uid://c5qpkxyf2dww7" path="res://assets/textures/ui/spr_title_youDidIt.png" id="5_wawo4"]
+[ext_resource type="Texture2D" uid="uid://b020n1pewf1yk" path="res://assets/textures/ui/spr_title_thankYou.png" id="6_56v3a"]
+[ext_resource type="AudioStream" uid="uid://by8acokhtxp2n" path="res://assets/audio/snd_gameOver.wav" id="7_irg28"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o57t2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_v3hpu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_irg28")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_2jtsn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_8bugq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_2jtsn"]
+resource_name = "default"
+length = 4.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("7_irg28")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer:volume_db")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(3, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -39.169]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BG:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0333333, 1, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Congrats:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.666667, 3.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ThankYou:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2.8, 3.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+
+[sub_resource type="Animation" id="Animation_8bugq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BG:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Congrats:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ThankYou:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wawo4"]
+_data = {
+&"RESET": SubResource("Animation_8bugq"),
+&"default": SubResource("Animation_2jtsn")
+}
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="BG" type="AnimatedSprite2D" parent="."]
+position = Vector2(960, 540)
+sprite_frames = SubResource("SpriteFrames_o57t2")
+autoplay = "default"
+frame_progress = 0.138388
+
+[node name="Congrats" type="Sprite2D" parent="."]
+position = Vector2(940, 400)
+texture = ExtResource("5_wawo4")
+
+[node name="ThankYou" type="Sprite2D" parent="."]
+position = Vector2(940, 720)
+texture = ExtResource("6_56v3a")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_wawo4")
+}
+autoplay = "default"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

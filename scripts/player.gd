@@ -10,6 +10,9 @@ enum DIR {LEFT, RIGHT, UP, DOWN}
 @export var runSpeed: float = 600.0			# pixel / second
 
 @onready var animSprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var bakerChar: CharacterBody2D = get_node("/root/Town/Environment/NPCs/Baker")
+@onready var grocerChar: CharacterBody2D = get_node("/root/Town/Environment/NPCs/Grocer")
+@onready var teacherChar: CharacterBody2D = get_node("/root/Town/Environment/NPCs/Teacher")
 
 var actionPossible: bool = false			# i.e. talking or picking up an item
 
@@ -88,6 +91,9 @@ func _physics_process(delta: float) -> void:
 							carryLimit = 1.0
 							detectedBody.setHappy()
 							Global.showCutscene(detectedBody.cutsceneHappy)
+							if bakerChar.npcDone && grocerChar.npcDone && teacherChar.npcDone:
+								Global.gameOver = true
+								# when cutscene finishes game is over
 						else:
 							playerState = STATE.IDLE
 							velocity = Vector2.ZERO

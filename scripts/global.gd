@@ -25,9 +25,11 @@ var cutsceneGrocerHappy: Resource = preload("res://scenes/cutscene_grocer_happy.
 var cutsceneGrocerSad: Resource = preload("res://scenes/cutscene_grocer_sad.tscn")
 var cutsceneTeacherHappy: Resource = preload("res://scenes/cutscene_teacher_happy.tscn")
 var cutsceneTeacherSad: Resource = preload("res://scenes/cutscene_teacher_sad.tscn")
+var cutsceneGameOver: Resource = preload("res://scenes/game_over.tscn")
 var cutsceneInstance: Node = null
 
 var playerCanMove: bool = true
+var gameOver: bool = false
 
 @onready var musicPlayer: AudioStreamPlayer = get_node("/root/Town/BGMusic")
 @onready var ambiencePlayer: AudioStreamPlayer = get_node("/root/Town/BGAmbience")
@@ -136,5 +138,7 @@ func showCutscene(name: String) -> void:
 			cutsceneInstance = cutsceneTeacherHappy.instantiate()
 		"teacherSad":
 			cutsceneInstance = cutsceneTeacherSad.instantiate()
+		"gameOver":
+			cutsceneInstance = cutsceneGameOver.instantiate()
 	
 	get_node("/root/Town/Cutscenes").add_child(cutsceneInstance)
