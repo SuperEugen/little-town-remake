@@ -17,8 +17,8 @@
 [ext_resource type="PackedScene" uid="uid://fc1hmlfqvlcp" path="res://scenes/cabbage.tscn" id="16_ov17k"]
 [ext_resource type="PackedScene" uid="uid://dujkj58ivptxy" path="res://scenes/watering_can.tscn" id="17_2dnfj"]
 [ext_resource type="PackedScene" uid="uid://c0daisl5r8mqq" path="res://scenes/scale.tscn" id="18_8m6oo"]
+[ext_resource type="AudioStream" uid="uid://dl47u00vdpso7" path="res://assets/music/BGM_little_town_remake.mp3" id="19_ckatl"]
 [ext_resource type="PackedScene" uid="uid://box6k2mlx3e3" path="res://scenes/rolling_pin.tscn" id="19_uvrjk"]
-[ext_resource type="AudioStream" uid="uid://bkx0qdlxjjqa7" path="res://assets/music/snd_townBGM.wav" id="21_0havn"]
 [ext_resource type="AudioStream" uid="uid://dt53wk3r8tjdy" path="res://assets/sfx/snd_ambience.wav" id="21_ov17k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ms2es"]
@@ -359,7 +359,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="BGMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("21_0havn")
+stream = ExtResource("19_ckatl")
 volume_db = -10.0
 autoplay = true
 
