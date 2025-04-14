@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://ci5e1ilbg6ul" path="res://assets/textures/npcs/grocer/spr_grocer_happy_strip04.png" id="4_d048l"]
 [ext_resource type="Texture2D" uid="uid://b6eeu3uuh1rb2" path="res://assets/textures/npcs/grocer/spr_grocer_walk_left_strip04.png" id="5_73jbd"]
 [ext_resource type="Texture2D" uid="uid://bf2mhc0ddfjqw" path="res://assets/textures/npcs/grocer/spr_grocer_sad_strip04.png" id="6_mw57e"]
-[ext_resource type="AudioStream" uid="uid://dynske8io0bkv" path="res://assets/music/snd_seq_bad02_BGM.wav" id="8_xmdc6"]
+[ext_resource type="AudioStream" uid="uid://cb6n28cxc3p6r" path="res://assets/music/clip_bad_2.ogg" id="8_xmdc6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bnt6w"]
 animations = [{
@@ -264,7 +264,7 @@ _data = {
 &"cutscene": SubResource("Animation_rp7jh")
 }
 
-[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_bwvnf"]
+[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_xmdc6"]
 
 [node name="cutsceneGrocerSad" type="CanvasLayer"]
 script = ExtResource("1_bwvnf")
@@ -289,6 +289,6 @@ libraries = {
 autoplay = "RESET"
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
-stream = SubResource("AudioStreamPolyphonic_bwvnf")
+stream = SubResource("AudioStreamPolyphonic_xmdc6")
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

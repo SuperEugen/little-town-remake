@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bh60a1h2goucn" path="res://assets/textures/npcs/baker/spr_baker_happy_strip04.png" id="5_my0du"]
 [ext_resource type="Texture2D" uid="uid://cdniyq0f66dkx" path="res://assets/textures/npcs/baker/spr_baker_walk_left_strip04.png" id="6_e8828"]
 [ext_resource type="Texture2D" uid="uid://cor1sfc6lhjhy" path="res://assets/textures/npcs/baker/spr_baker_sad_strip04.png" id="7_6xu3q"]
-[ext_resource type="AudioStream" uid="uid://q83hn8i2swrp" path="res://assets/music/snd_seq_bad01_BGM.wav" id="9_tc5j7"]
+[ext_resource type="AudioStream" uid="uid://bq4eeklxmgq0" path="res://assets/music/clip_bad_1.ogg" id="9_tc5j7"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6xu3q"]
 animations = [{
@@ -256,7 +256,7 @@ _data = {
 &"cutscene": SubResource("Animation_rp7jh")
 }
 
-[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_7umlp"]
+[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_tc5j7"]
 
 [node name="cutsceneBakerSad" type="CanvasLayer"]
 script = ExtResource("1_7umlp")
@@ -280,6 +280,6 @@ libraries = {
 autoplay = "RESET"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = SubResource("AudioStreamPolyphonic_7umlp")
+stream = SubResource("AudioStreamPolyphonic_tc5j7")
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

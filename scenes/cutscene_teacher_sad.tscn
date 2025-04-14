@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bti0hmqhg12bm" path="res://assets/textures/npcs/teacher/spr_teacher_happy_strip03.png" id="5_vmbba"]
 [ext_resource type="Texture2D" uid="uid://dlgsxf2jmjb87" path="res://assets/textures/npcs/teacher/spr_teacher_walk_left_strip04.png" id="6_sa2st"]
 [ext_resource type="Texture2D" uid="uid://cvs6lrydp7dwx" path="res://assets/textures/npcs/teacher/spr_teacher_sad_strip04.png" id="7_dtfip"]
-[ext_resource type="AudioStream" uid="uid://ccdjusjl3hqas" path="res://assets/music/snd_seq_bad03_BGM.wav" id="7_ne3mw"]
+[ext_resource type="AudioStream" uid="uid://dpwd0u03dw07i" path="res://assets/music/clip_bad_3.ogg" id="8_ne3mw"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6xu3q"]
 animations = [{
@@ -26,7 +26,7 @@ animations = [{
 "speed": 8.0
 }]
 
-[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_4hq3q"]
+[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_ne3mw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ofng5"]
 atlas = ExtResource("5_vmbba")
@@ -183,7 +183,7 @@ tracks/4/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("7_ne3mw")
+"stream": ExtResource("8_ne3mw")
 }],
 "times": PackedFloat32Array(0)
 }
@@ -269,7 +269,7 @@ sprite_frames = SubResource("SpriteFrames_6xu3q")
 autoplay = "default"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = SubResource("AudioStreamPolyphonic_4hq3q")
+stream = SubResource("AudioStreamPolyphonic_ne3mw")
 
 [node name="Teacher" type="AnimatedSprite2D" parent="."]
 position = Vector2(2088, 549)

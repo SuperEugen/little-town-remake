@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cglbaw1s8s434" path="res://assets/textures/ui/spr_bg_mainTitle.png" id="1_r53bv"]
 [ext_resource type="Texture2D" uid="uid://bhoylw2ylvucp" path="res://assets/textures/ui/spr_title_mainLogo.png" id="2_pu10i"]
 [ext_resource type="Texture2D" uid="uid://bmho5umpj8dms" path="res://assets/textures/ui/spr_title_pressEnter.png" id="3_c1wte"]
-[ext_resource type="AudioStream" uid="uid://holsu0k8tbuo" path="res://assets/music/snd_seq_good01_BGM.wav" id="5_c1wte"]
+[ext_resource type="AudioStream" uid="uid://3he3gr572i18" path="res://assets/music/clip_good_1.ogg" id="5_c1wte"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_pu10i")

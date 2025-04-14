@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bti0hmqhg12bm" path="res://assets/textures/npcs/teacher/spr_teacher_happy_strip03.png" id="5_yp1kc"]
 [ext_resource type="Texture2D" uid="uid://dlgsxf2jmjb87" path="res://assets/textures/npcs/teacher/spr_teacher_walk_left_strip04.png" id="6_udwp0"]
 [ext_resource type="Texture2D" uid="uid://cvs6lrydp7dwx" path="res://assets/textures/npcs/teacher/spr_teacher_sad_strip04.png" id="8_6lmxm"]
-[ext_resource type="AudioStream" uid="uid://by87hkjbu1kmf" path="res://assets/music/snd_seq_good03_BGM.wav" id="9_6lmxm"]
+[ext_resource type="AudioStream" uid="uid://b4e4343riptcc" path="res://assets/music/clip_good_3.ogg" id="9_6lmxm"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6xu3q"]
 animations = [{
@@ -261,7 +261,7 @@ _data = {
 &"cutscene": SubResource("Animation_rp7jh")
 }
 
-[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_udwp0"]
+[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_6lmxm"]
 
 [node name="cutsceneTeacherHappy" type="CanvasLayer"]
 script = ExtResource("1_uf0oy")
@@ -285,6 +285,6 @@ libraries = {
 autoplay = "RESET"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = SubResource("AudioStreamPolyphonic_udwp0")
+stream = SubResource("AudioStreamPolyphonic_6lmxm")
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
