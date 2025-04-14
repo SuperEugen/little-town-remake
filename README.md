@@ -5,7 +5,7 @@ GameMaker Tutorial remade in Godot to understand the differences between the two
 Original Tutorial: https://gamemaker.io/de/tutorials/little-town-gamemaker-tutorial
 
 **Status**: WIP  
-**Genre:** top town 2D, adventure  
+**Genre:** top town 2D, adventure, non pixel art  
 **Engine**: Godot 4.4  
 **Language**: GDScript  
 
@@ -30,12 +30,18 @@ Original Tutorial: https://gamemaker.io/de/tutorials/little-town-gamemaker-tutor
 ## :electric_plug: Plug-ins
 - TODO Manager (Godot 4) from the [AssetLib](https://godotengine.org/asset-library/asset/1327)
 
+## :factory: Additional Software
+- **Sound recording**: iPhone with EZAudioCut  
+- **Music**: GarageBand with AppleLoops  
+- **Sprites, Animations and Tiles**: Moho Pro 14.3  
+- **Project management and documentation**: GitHub with Project  
+
 ## :framed_picture: Assets
-- **Tilesheet**: YoYo Games
-- **Sprites**: YoYo Games
-- **UI**: YoYo Games
-- **Music**: AudioHero
-- **SFX**: SuperEugen
+- **SFX**: SuperEugen  
+- **Music**: AudioHero  
+- **Sprites**: YoYo Games  
+- **Animations**: YoYo Games  
+- **Tiles**: YoYo Games  
 
 ## :man_teacher: Learning Ressources
 - Official Godot tutorial: [Your first 2D Game](https://docs.godotengine.org/en/stable/getting_started/first_2d_game/index.html)
