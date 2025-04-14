@@ -5,7 +5,7 @@ GameMaker Tutorial remade in Godot to understand the differences between the two
 Original Tutorial: https://gamemaker.io/de/tutorials/little-town-gamemaker-tutorial
 
 **Status**: WIP  
-**Genre:** top town 2D, adventure, non pixel art
+**Genre:** top town 2D, adventure, non pixel art  
 **Engine**: Godot 4.4  
 **Language**: GDScript  
 
