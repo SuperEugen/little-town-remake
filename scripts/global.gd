@@ -8,6 +8,9 @@ var sfxPromptOpen: Resource = preload("res://assets/sfx/snd_click.wav")
 
 enum SFX {GREETING, PICK_UP, PUT_DOWN, DIALOG_OPEN, PROMPT_OPEN}
 
+var sndBGM: Resource = preload("res://assets/music/BGM_little_town_remake.ogg")
+var sndAmbience: Resource = preload("res://assets/sfx/snd_ambience.wav")
+
 var fadeSpeed: float = 0.5		# time in seconds for fading in and out dialogs and prompts
 
 var dialogScene: Resource = preload("res://scenes/dialog_box.tscn")
@@ -31,8 +34,22 @@ var cutsceneInstance: Node = null
 var playerCanMove: bool = true
 var gameOver: bool = false
 
-@onready var musicPlayer: AudioStreamPlayer = get_node("/root/Town/BGMusic")
-@onready var ambiencePlayer: AudioStreamPlayer = get_node("/root/Town/BGAmbience")
+var musicPlayer: AudioStreamPlayer = null
+var ambiencePlayer: AudioStreamPlayer = null
+
+func _ready() -> void:
+	musicPlayer = AudioStreamPlayer.new()
+	musicPlayer.name = "BGMusic"
+	add_child(musicPlayer)
+	ambiencePlayer = AudioStreamPlayer.new()
+	ambiencePlayer.name = "BGAmbience"
+	add_child(ambiencePlayer)
+
+func playBGMAndAmbience() -> void:
+	musicPlayer.set_stream(sndBGM)
+	musicPlayer.play()
+	ambiencePlayer.set_stream(sndAmbience)
+	ambiencePlayer.play()
 
 func playSFX(sfx: SFX) -> void:
 	var asp := AudioStreamPlayer.new()
