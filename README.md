@@ -32,7 +32,7 @@ Original Tutorial: https://gamemaker.io/de/tutorials/little-town-gamemaker-tutor
 
 ## :factory: Additional Software
 - **Sound recording**: iPhone with EZAudioCut  
-- **Music**: GarageBand with AppleLoops  
+- **Music**: GarageBand with AppleLoops, converted to OGG with VLC  
 - **Sprites, Animations and Tiles**: Moho Pro 14.3  
 - **Project management and documentation**: GitHub with Project  
 
