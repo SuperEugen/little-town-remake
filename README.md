@@ -38,8 +38,8 @@ Original Tutorial: https://gamemaker.io/de/tutorials/little-town-gamemaker-tutor
 
 ## :framed_picture: Assets
 - **SFX**: SuperEugen  
-- **Music**: AudioHero  
-- **Sprites**: YoYo Games  
+- **Music**: SuperEugen  
+- **Sprites**: SuperEugen and YoYo Games  
 - **Animations**: YoYo Games  
 - **Tiles**: YoYo Games  
 
