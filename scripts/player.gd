@@ -119,7 +119,6 @@ func _physics_process(delta: float) -> void:
 					velocity = Vector2.ZERO
 					hasItem = detectedBody
 					carryLimit = detectedBody.itemWeight
-					hasItem.itemState = Item.STATE.TAKEN
 					Global.fadeOutPrompt(self)
 					Global.playSFX(Global.SFX.PICK_UP)
 					# when animation finished state will be changed to carry idle
@@ -128,7 +127,6 @@ func _physics_process(delta: float) -> void:
 					playerState = STATE.PUTTING_DOWN
 					velocity = Vector2.ZERO
 					carryLimit = 1.0
-					hasItem.itemState = Item.STATE.IDLE
 					hasItem = null
 					Global.playSFX(Global.SFX.PUT_DOWN)
 					# when animation finished state will be changed to idle					

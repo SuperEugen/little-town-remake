@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://fc1hmlfqvlcp"]
 
 [ext_resource type="Script" uid="uid://dia2ssr0d8rrj" path="res://scripts/item.gd" id="1_danii"]
-[ext_resource type="Texture2D" uid="uid://dj25qntt0bung" path="res://assets/textures/items/spr_item03.png" id="1_xsrca"]
+[ext_resource type="Texture2D" uid="uid://cfkk7etbex6nx" path="res://assets/textures/items/cabbage.png" id="2_danii"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_danii"]
 radius = 36.0139
@@ -13,7 +13,7 @@ itemName = "Cabbage"
 itemWeight = 3.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_xsrca")
+texture = ExtResource("2_danii")
 offset = Vector2(0, -29)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
