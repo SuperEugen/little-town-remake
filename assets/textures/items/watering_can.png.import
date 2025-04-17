@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dg1cajgxflr3"
-path="res://.godot/imported/spr_shadow_npc.png-6ba86875586daf4702c5fdb736c8b937.ctex"
+uid="uid://dlrtg63m3hr77"
+path="res://.godot/imported/watering_can.png-ff323b92fe6764f5a05744fd4689dd54.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/other/spr_shadow_npc.png"
-dest_files=["res://.godot/imported/spr_shadow_npc.png-6ba86875586daf4702c5fdb736c8b937.ctex"]
+source_file="res://assets/textures/items/watering_can.png"
+dest_files=["res://.godot/imported/watering_can.png-ff323b92fe6764f5a05744fd4689dd54.ctex"]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c0daisl5r8mqq"]
 
-[ext_resource type="Texture2D" uid="uid://dg2jldt2ilqfv" path="res://assets/textures/items/spr_item04.png" id="1_gdnv7"]
 [ext_resource type="Script" uid="uid://dia2ssr0d8rrj" path="res://scripts/item.gd" id="1_y2cc7"]
+[ext_resource type="Texture2D" uid="uid://c4f24xc8qpawo" path="res://assets/textures/items/scale.png" id="2_y2cc7"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y2cc7"]
 radius = 19.0
@@ -14,7 +14,7 @@ itemName = "Scale"
 itemWeight = 5.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_gdnv7")
+texture = ExtResource("2_y2cc7")
 offset = Vector2(0, -29)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

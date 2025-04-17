@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://e5nnayfgbow7"]
 
-[ext_resource type="Texture2D" uid="uid://di0g2cj33ainh" path="res://assets/textures/ui/spr_gui_prompt.png" id="1_0xlvs"]
+[ext_resource type="Texture2D" uid="uid://c8ads702eix54" path="res://assets/textures/ui/prompt.png" id="1_0xlvs"]
 
 [sub_resource type="Animation" id="Animation_b70cq"]
 length = 0.001

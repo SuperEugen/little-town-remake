@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bnax3f8xr7ly7"]
 
 [ext_resource type="Script" uid="uid://dia2ssr0d8rrj" path="res://scripts/item.gd" id="1_3wpgy"]
-[ext_resource type="Texture2D" uid="uid://drg0vqp6o2k2f" path="res://assets/textures/items/spr_item05.png" id="1_ble1a"]
+[ext_resource type="Texture2D" uid="uid://j6o68uupls2e" path="res://assets/textures/items/book.png" id="2_3wpgy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3wpgy"]
 radius = 23.0
@@ -13,7 +13,7 @@ script = ExtResource("1_3wpgy")
 itemName = "Book"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_ble1a")
+texture = ExtResource("2_3wpgy")
 offset = Vector2(0, -21)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

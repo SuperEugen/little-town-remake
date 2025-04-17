@@ -1,7 +1,7 @@
 [gd_scene load_steps=25 format=3 uid="uid://b8lbo2ywqydj6"]
 
 [ext_resource type="Script" uid="uid://ci0622025f5o5" path="res://scripts/npc.gd" id="1_n3vwl"]
-[ext_resource type="Texture2D" uid="uid://dg1cajgxflr3" path="res://assets/textures/other/spr_shadow_npc.png" id="2_jcmri"]
+[ext_resource type="Texture2D" uid="uid://ccrjwibxkesl4" path="res://assets/textures/other/shadow.png" id="2_jcmri"]
 [ext_resource type="Texture2D" uid="uid://bh60a1h2goucn" path="res://assets/textures/npcs/baker/spr_baker_happy_strip04.png" id="2_n3vwl"]
 [ext_resource type="Texture2D" uid="uid://cxe8b4rq1608f" path="res://assets/textures/npcs/baker/spr_baker_idle_down_strip04.png" id="3_iocjs"]
 [ext_resource type="Texture2D" uid="uid://cor1sfc6lhjhy" path="res://assets/textures/npcs/baker/spr_baker_sad_strip04.png" id="4_xg4td"]
