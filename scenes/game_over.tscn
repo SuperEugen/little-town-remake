@@ -1,12 +1,12 @@
 [gd_scene load_steps=13 format=3 uid="uid://hxjpjshs31c4"]
 
-[ext_resource type="Script" uid="uid://cd6vmfxphlujt" path="res://scenes/game_over.gd" id="1_2jtsn"]
+[ext_resource type="Script" uid="uid://cd6vmfxphlujt" path="res://scripts/game_over.gd" id="1_2jtsn"]
 [ext_resource type="Texture2D" uid="uid://ea1w30s156ae" path="res://assets/textures/bg/greenBG-1.png" id="1_v3hpu"]
 [ext_resource type="Texture2D" uid="uid://b0glbp8iyin2s" path="res://assets/textures/bg/greenBG-2.png" id="2_irg28"]
 [ext_resource type="Texture2D" uid="uid://v836swnmapkg" path="res://assets/textures/bg/greenBG-3.png" id="3_2jtsn"]
 [ext_resource type="Texture2D" uid="uid://dqcoaoyafvtxa" path="res://assets/textures/bg/greenBG-4.png" id="4_8bugq"]
-[ext_resource type="Texture2D" uid="uid://c5qpkxyf2dww7" path="res://assets/textures/ui/spr_title_youDidIt.png" id="5_wawo4"]
-[ext_resource type="Texture2D" uid="uid://b020n1pewf1yk" path="res://assets/textures/ui/spr_title_thankYou.png" id="6_56v3a"]
+[ext_resource type="Texture2D" uid="uid://y5fu6fc0lhmy" path="res://assets/textures/ui/done.png" id="6_2jtsn"]
+[ext_resource type="Texture2D" uid="uid://bd4fupj68lu7j" path="res://assets/textures/ui/thanks.png" id="7_8bugq"]
 [ext_resource type="AudioStream" uid="uid://by8acokhtxp2n" path="res://assets/sfx/snd_game_over.wav" id="7_irg28"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_o57t2"]
@@ -164,11 +164,11 @@ frame_progress = 0.471482
 
 [node name="Congrats" type="Sprite2D" parent="."]
 position = Vector2(960, 400)
-texture = ExtResource("5_wawo4")
+texture = ExtResource("6_2jtsn")
 
 [node name="ThankYou" type="Sprite2D" parent="."]
 position = Vector2(960, 720)
-texture = ExtResource("6_56v3a")
+texture = ExtResource("7_8bugq")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

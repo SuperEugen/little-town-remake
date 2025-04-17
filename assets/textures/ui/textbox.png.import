@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdkxbwtkvu4st"
-path="res://.godot/imported/blueBG-3.png-1368fe1ae18d68eccedcaf5a88543820.ctex"
+uid="uid://blt11hygl1pc5"
+path="res://.godot/imported/textbox.png-70d648fab07d1292cc5b3381d56c6018.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/bg/blueBG-3.png"
-dest_files=["res://.godot/imported/blueBG-3.png-1368fe1ae18d68eccedcaf5a88543820.ctex"]
+source_file="res://assets/textures/ui/textbox.png"
+dest_files=["res://.godot/imported/textbox.png-70d648fab07d1292cc5b3381d56c6018.ctex"]
 
 [params]
 

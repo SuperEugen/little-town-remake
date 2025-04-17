@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cygfyhwj4l5sj"]
+[gd_scene load_steps=5 format=3 uid="uid://cygfyhwj4l5sj"]
 
-[ext_resource type="Script" uid="uid://dt5wjbtby8cui" path="res://scenes/main_title.gd" id="1_pu10i"]
+[ext_resource type="Script" uid="uid://dt5wjbtby8cui" path="res://scripts/main_title.gd" id="1_pu10i"]
 [ext_resource type="Texture2D" uid="uid://cglbaw1s8s434" path="res://assets/textures/ui/spr_bg_mainTitle.png" id="1_r53bv"]
-[ext_resource type="Texture2D" uid="uid://bhoylw2ylvucp" path="res://assets/textures/ui/spr_title_mainLogo.png" id="2_pu10i"]
-[ext_resource type="Texture2D" uid="uid://bmho5umpj8dms" path="res://assets/textures/ui/spr_title_pressEnter.png" id="3_c1wte"]
+[ext_resource type="Texture2D" uid="uid://chbppdvfnx7gr" path="res://assets/textures/ui/enter.png" id="3_pu10i"]
 [ext_resource type="AudioStream" uid="uid://3he3gr572i18" path="res://assets/music/clip_good_1.ogg" id="5_c1wte"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
@@ -23,11 +22,10 @@ region_rect = Rect2(0, 0, 1920, 1080)
 
 [node name="MainLogo" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
-texture = ExtResource("2_pu10i")
 
 [node name="PressEnter" type="Sprite2D" parent="."]
-position = Vector2(960, 992)
-texture = ExtResource("3_c1wte")
+position = Vector2(960, 540)
+texture = ExtResource("3_pu10i")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_c1wte")

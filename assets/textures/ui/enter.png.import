@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhsyo8qug52py"
-path="res://.godot/imported/spr_gui_textbox.png-4a5532cab919093a69772360cc2efe17.ctex"
+uid="uid://chbppdvfnx7gr"
+path="res://.godot/imported/enter.png-57df58a8c96949c298f7f7e9ffcfde8a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/ui/spr_gui_textbox.png"
-dest_files=["res://.godot/imported/spr_gui_textbox.png-4a5532cab919093a69772360cc2efe17.ctex"]
+source_file="res://assets/textures/ui/enter.png"
+dest_files=["res://.godot/imported/enter.png-57df58a8c96949c298f7f7e9ffcfde8a.ctex"]
 
 [params]
 
