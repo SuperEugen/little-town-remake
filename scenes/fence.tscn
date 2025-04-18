@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cgs0mxt8jrsao"]
 
-[ext_resource type="Texture2D" uid="uid://cmjubboqy0xk6" path="res://assets/textures/town/spr_fence01.png" id="1_tphf0"]
+[ext_resource type="Texture2D" uid="uid://ch75sxkmaupug" path="res://assets/textures/town/fence.png" id="1_tphf0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tphf0"]
 size = Vector2(194, 73)
