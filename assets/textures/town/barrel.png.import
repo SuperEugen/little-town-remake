@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c21wvckjkag86"
-path="res://.godot/imported/spr_bush01.png-b9daa35183e31b1e81b29fbd32e6c59b.ctex"
+uid="uid://dc3yybrg6oi3d"
+path="res://.godot/imported/barrel.png-b7661af34d371d16af24382dc03f9c3c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/town/spr_bush01.png"
-dest_files=["res://.godot/imported/spr_bush01.png-b9daa35183e31b1e81b29fbd32e6c59b.ctex"]
+source_file="res://assets/textures/town/barrel.png"
+dest_files=["res://.godot/imported/barrel.png-b7661af34d371d16af24382dc03f9c3c.ctex"]
 
 [params]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://tahc8mth3li"]
 
-[ext_resource type="Texture2D" uid="uid://c21wvckjkag86" path="res://assets/textures/town/spr_bush01.png" id="1_lad4k"]
+[ext_resource type="Texture2D" uid="uid://dtputdrap1yik" path="res://assets/textures/town/bush.png" id="1_lad4k"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lad4k"]
 radius = 52.0

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ik18f6adrd8l"]
 
-[ext_resource type="Texture2D" uid="uid://o2a0pfp02om8" path="res://assets/textures/town/spr_barrel01.png" id="1_q36op"]
+[ext_resource type="Texture2D" uid="uid://dc3yybrg6oi3d" path="res://assets/textures/town/barrel.png" id="1_q36op"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q36op"]
 radius = 45.0
