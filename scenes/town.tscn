@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://d1qos58qmfxst"]
+[gd_scene load_steps=28 format=4 uid="uid://d1qos58qmfxst"]
 
 [ext_resource type="PackedScene" uid="uid://rtl6bq6dgnn7" path="res://scenes/player.tscn" id="1_gt07c"]
 [ext_resource type="Texture2D" uid="uid://dpgg2sq77y0rp" path="res://assets/textures/tiles/spr_townTiles.png" id="2_ms2es"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://cgs0mxt8jrsao" path="res://scenes/fence.tscn" id="6_cq4yp"]
 [ext_resource type="PackedScene" uid="uid://doxdr74hckhem" path="res://scenes/fountain.tscn" id="7_cq4yp"]
 [ext_resource type="PackedScene" uid="uid://bctaux30bxsor" path="res://scenes/rock.tscn" id="8_5q1rr"]
+[ext_resource type="Texture2D" uid="uid://dl483h4h1iwpy" path="res://assets/textures/town/school-sign.png" id="10_ckatl"]
+[ext_resource type="Texture2D" uid="uid://b5y23dvcpq0rw" path="res://assets/textures/town/grocery-sign.png" id="11_0havn"]
 [ext_resource type="PackedScene" uid="uid://b8lbo2ywqydj6" path="res://scenes/baker.tscn" id="11_po04c"]
 [ext_resource type="PackedScene" uid="uid://cihnavf4q8vu" path="res://scenes/teacher.tscn" id="12_icc4n"]
 [ext_resource type="PackedScene" uid="uid://chctdl2gd8kcd" path="res://scenes/grocer.tscn" id="12_u4arb"]
@@ -17,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://fc1hmlfqvlcp" path="res://scenes/cabbage.tscn" id="16_ov17k"]
 [ext_resource type="PackedScene" uid="uid://dujkj58ivptxy" path="res://scenes/watering_can.tscn" id="17_2dnfj"]
 [ext_resource type="PackedScene" uid="uid://c0daisl5r8mqq" path="res://scenes/scale.tscn" id="18_8m6oo"]
+[ext_resource type="Texture2D" uid="uid://dkddo3sfpgjyq" path="res://assets/textures/town/bakery-sign.png" id="19_55swn"]
 [ext_resource type="PackedScene" uid="uid://box6k2mlx3e3" path="res://scenes/rolling_pin.tscn" id="19_uvrjk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ms2es"]
@@ -102,7 +105,7 @@ position = Vector2(0, 13)
 position = Vector2(1150, 441)
 
 [node name="Store2" parent="Environment/TownObjects" instance=ExtResource("3_v3ani")]
-position = Vector2(3708, 277)
+position = Vector2(3708, 402)
 
 [node name="Tree3" parent="Environment/TownObjects" instance=ExtResource("4_5q1rr")]
 position = Vector2(2229, 404)
@@ -275,12 +278,27 @@ position = Vector2(3711, 2992)
 [node name="Tree7" parent="Environment/TownObjects" instance=ExtResource("4_5q1rr")]
 position = Vector2(133, 2680)
 
+[node name="Bakery-sign" type="Sprite2D" parent="Environment/TownObjects"]
+z_index = 1
+position = Vector2(3705, 1)
+texture = ExtResource("19_55swn")
+
+[node name="School-sign" type="Sprite2D" parent="Environment/TownObjects"]
+z_index = 1
+position = Vector2(1152, 33)
+texture = ExtResource("10_ckatl")
+
+[node name="Grocery-sign" type="Sprite2D" parent="Environment/TownObjects"]
+z_index = 1
+position = Vector2(2786, 1679)
+texture = ExtResource("11_0havn")
+
 [node name="NPCs" type="Node2D" parent="Environment"]
 y_sort_enabled = true
 
 [node name="Baker" parent="Environment/NPCs" node_paths=PackedStringArray("npcItem") instance=ExtResource("11_po04c")]
 y_sort_enabled = true
-position = Vector2(3545, 346)
+position = Vector2(3545, 483)
 collision_layer = 2
 npcItem = NodePath("../../Items/RollingPin")
 npcText = "I sure wish I had something to help me bake these pies."

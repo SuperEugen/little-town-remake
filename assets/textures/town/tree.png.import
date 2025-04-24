@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dq5fn58uhlp3k"
-path="res://.godot/imported/spr_rock01.png-f98632508da46bdd16298eff8d06240d.ctex"
+uid="uid://7ryfqi5m5obr"
+path="res://.godot/imported/tree.png-b9d112c74a723acff83e0d60205cad0f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/town/spr_rock01.png"
-dest_files=["res://.godot/imported/spr_rock01.png-f98632508da46bdd16298eff8d06240d.ctex"]
+source_file="res://assets/textures/town/tree.png"
+dest_files=["res://.godot/imported/tree.png-b9d112c74a723acff83e0d60205cad0f.ctex"]
 
 [params]
 

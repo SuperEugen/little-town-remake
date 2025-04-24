@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dw0ww3ml0g1id"
-path="res://.godot/imported/spr_store01.png-8858eea3fba6f32c570dc27f4d95d64c.ctex"
+uid="uid://dl483h4h1iwpy"
+path="res://.godot/imported/school-sign.png-4b47c32848568533d88d3e4e25d1f77b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/town/spr_store01.png"
-dest_files=["res://.godot/imported/spr_store01.png-8858eea3fba6f32c570dc27f4d95d64c.ctex"]
+source_file="res://assets/textures/town/school-sign.png"
+dest_files=["res://.godot/imported/school-sign.png-4b47c32848568533d88d3e4e25d1f77b.ctex"]
 
 [params]
 
