@@ -1,11 +1,12 @@
-[gd_scene load_steps=27 format=3 uid="uid://bdx3brghr03lv"]
+[gd_scene load_steps=28 format=3 uid="uid://bdx3brghr03lv"]
 
-[ext_resource type="Texture2D" uid="uid://ea1w30s156ae" path="res://assets/textures/bg/greenBG-1.png" id="1_6lmxm"]
 [ext_resource type="Script" uid="uid://ctbarts0le8sf" path="res://scripts/cutscenes.gd" id="1_uf0oy"]
-[ext_resource type="Texture2D" uid="uid://b0glbp8iyin2s" path="res://assets/textures/bg/greenBG-2.png" id="2_uf0oy"]
-[ext_resource type="Texture2D" uid="uid://v836swnmapkg" path="res://assets/textures/bg/greenBG-3.png" id="3_lvt7r"]
-[ext_resource type="Texture2D" uid="uid://dqcoaoyafvtxa" path="res://assets/textures/bg/greenBG-4.png" id="4_rtiv6"]
+[ext_resource type="Texture2D" uid="uid://qit8nhbylldq" path="res://assets/textures/bg/good-anim_00001.png" id="2_uf0oy"]
+[ext_resource type="Texture2D" uid="uid://by8l81hmdkwnp" path="res://assets/textures/bg/good-anim_00002.png" id="3_lvt7r"]
+[ext_resource type="Texture2D" uid="uid://c37qvlbgisw3y" path="res://assets/textures/bg/good-anim_00003.png" id="4_rtiv6"]
+[ext_resource type="Texture2D" uid="uid://xowmr5kls0v5" path="res://assets/textures/bg/good-anim_00004.png" id="5_udwp0"]
 [ext_resource type="Texture2D" uid="uid://bti0hmqhg12bm" path="res://assets/textures/npcs/teacher/spr_teacher_happy_strip03.png" id="5_yp1kc"]
+[ext_resource type="Texture2D" uid="uid://cldcekl4pyrml" path="res://assets/textures/bg/good-anim_00005.png" id="6_a5as0"]
 [ext_resource type="Texture2D" uid="uid://dlgsxf2jmjb87" path="res://assets/textures/npcs/teacher/spr_teacher_walk_left_strip04.png" id="6_udwp0"]
 [ext_resource type="Texture2D" uid="uid://cvs6lrydp7dwx" path="res://assets/textures/npcs/teacher/spr_teacher_sad_strip04.png" id="8_6lmxm"]
 [ext_resource type="AudioStream" uid="uid://b4e4343riptcc" path="res://assets/music/clip_good_3.ogg" id="9_6lmxm"]
@@ -14,9 +15,6 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_6lmxm")
-}, {
-"duration": 1.0,
 "texture": ExtResource("2_uf0oy")
 }, {
 "duration": 1.0,
@@ -24,6 +22,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("4_rtiv6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_udwp0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_a5as0")
 }],
 "loop": true,
 "name": &"default",
@@ -261,7 +265,7 @@ _data = {
 &"cutscene": SubResource("Animation_rp7jh")
 }
 
-[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_6lmxm"]
+[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_kebck"]
 
 [node name="cutsceneTeacherHappy" type="CanvasLayer"]
 script = ExtResource("1_uf0oy")
@@ -285,6 +289,6 @@ libraries = {
 autoplay = "RESET"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = SubResource("AudioStreamPolyphonic_6lmxm")
+stream = SubResource("AudioStreamPolyphonic_kebck")
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

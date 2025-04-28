@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cob2eknwlb2y4"
-path="res://.godot/imported/redBG-1.png-7f0d2c5d90bfbe8ca949fb622d4a9477.ctex"
+uid="uid://bj087lfj86i8"
+path="res://.godot/imported/bad-anim_00005.png-1191cdceb5a22f588d5c5c1fb37daf77.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/bg/redBG-1.png"
-dest_files=["res://.godot/imported/redBG-1.png-7f0d2c5d90bfbe8ca949fb622d4a9477.ctex"]
+source_file="res://assets/textures/bg/bad-anim_00005.png"
+dest_files=["res://.godot/imported/bad-anim_00005.png-1191cdceb5a22f588d5c5c1fb37daf77.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0nunh7e8h2u8"
-path="res://.godot/imported/redBG-3.png-7158dec7fd9249cbebb0f0e176f9d00d.ctex"
+uid="uid://d075w1aai0j8b"
+path="res://.godot/imported/fountain_00004.png-69376c3076ec3869ed4c83cb6093da4a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/bg/redBG-3.png"
-dest_files=["res://.godot/imported/redBG-3.png-7158dec7fd9249cbebb0f0e176f9d00d.ctex"]
+source_file="res://assets/textures/town/fountain_00004.png"
+dest_files=["res://.godot/imported/fountain_00004.png-69376c3076ec3869ed4c83cb6093da4a.ctex"]
 
 [params]
 

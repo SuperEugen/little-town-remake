@@ -1,21 +1,19 @@
-[gd_scene load_steps=28 format=3 uid="uid://gtvn8uwyh7h5"]
+[gd_scene load_steps=29 format=3 uid="uid://gtvn8uwyh7h5"]
 
 [ext_resource type="Script" uid="uid://ctbarts0le8sf" path="res://scripts/cutscenes.gd" id="1_abb2f"]
-[ext_resource type="Texture2D" uid="uid://ea1w30s156ae" path="res://assets/textures/bg/greenBG-1.png" id="1_du7jy"]
-[ext_resource type="Texture2D" uid="uid://b0glbp8iyin2s" path="res://assets/textures/bg/greenBG-2.png" id="2_abb2f"]
-[ext_resource type="Texture2D" uid="uid://v836swnmapkg" path="res://assets/textures/bg/greenBG-3.png" id="3_fqki3"]
-[ext_resource type="Texture2D" uid="uid://dqcoaoyafvtxa" path="res://assets/textures/bg/greenBG-4.png" id="4_7t6t8"]
+[ext_resource type="Texture2D" uid="uid://qit8nhbylldq" path="res://assets/textures/bg/good-anim_00001.png" id="2_abb2f"]
+[ext_resource type="Texture2D" uid="uid://by8l81hmdkwnp" path="res://assets/textures/bg/good-anim_00002.png" id="3_fqki3"]
+[ext_resource type="Texture2D" uid="uid://c37qvlbgisw3y" path="res://assets/textures/bg/good-anim_00003.png" id="4_7t6t8"]
 [ext_resource type="Texture2D" uid="uid://ci5e1ilbg6ul" path="res://assets/textures/npcs/grocer/spr_grocer_happy_strip04.png" id="4_fqki3"]
+[ext_resource type="Texture2D" uid="uid://xowmr5kls0v5" path="res://assets/textures/bg/good-anim_00004.png" id="5_4m881"]
 [ext_resource type="Texture2D" uid="uid://b6eeu3uuh1rb2" path="res://assets/textures/npcs/grocer/spr_grocer_walk_left_strip04.png" id="5_7t6t8"]
 [ext_resource type="Texture2D" uid="uid://bf2mhc0ddfjqw" path="res://assets/textures/npcs/grocer/spr_grocer_sad_strip04.png" id="6_4m881"]
+[ext_resource type="Texture2D" uid="uid://cldcekl4pyrml" path="res://assets/textures/bg/good-anim_00005.png" id="6_n2mm4"]
 [ext_resource type="AudioStream" uid="uid://bkps6rgi5fgys" path="res://assets/music/clip_good_2.ogg" id="9_du7jy"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bnt6w"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_du7jy")
-}, {
 "duration": 1.0,
 "texture": ExtResource("2_abb2f")
 }, {
@@ -24,6 +22,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("4_7t6t8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4m881")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_n2mm4")
 }],
 "loop": true,
 "name": &"default",
@@ -268,7 +272,7 @@ _data = {
 &"cutscene": SubResource("Animation_rp7jh")
 }
 
-[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_du7jy"]
+[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_abb2f"]
 
 [node name="cutsceneGrocerHappy" type="CanvasLayer"]
 script = ExtResource("1_abb2f")
@@ -292,6 +296,6 @@ libraries = {
 autoplay = "RESET"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = SubResource("AudioStreamPolyphonic_du7jy")
+stream = SubResource("AudioStreamPolyphonic_abb2f")
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

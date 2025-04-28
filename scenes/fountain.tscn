@@ -1,45 +1,29 @@
-[gd_scene load_steps=10 format=3 uid="uid://doxdr74hckhem"]
+[gd_scene load_steps=9 format=3 uid="uid://doxdr74hckhem"]
 
-[ext_resource type="Texture2D" uid="uid://buvupdat3fx0" path="res://assets/textures/town/spr_fountain_strip05.png" id="1_50hkb"]
+[ext_resource type="Texture2D" uid="uid://jy0i322356ei" path="res://assets/textures/town/fountain_00001.png" id="1_ifxtb"]
+[ext_resource type="Texture2D" uid="uid://cpcd0hfid7cq5" path="res://assets/textures/town/fountain_00002.png" id="2_jc6qj"]
 [ext_resource type="AudioStream" uid="uid://cgfw4iel1gnft" path="res://assets/sfx/snd_fountain.wav" id="2_m72p2"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_m72p2"]
-atlas = ExtResource("1_50hkb")
-region = Rect2(0, 0, 500, 395)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lfgns"]
-atlas = ExtResource("1_50hkb")
-region = Rect2(500, 0, 500, 395)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_uterx"]
-atlas = ExtResource("1_50hkb")
-region = Rect2(1000, 0, 500, 395)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xo7qt"]
-atlas = ExtResource("1_50hkb")
-region = Rect2(1500, 0, 500, 395)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ifxtb"]
-atlas = ExtResource("1_50hkb")
-region = Rect2(2000, 0, 500, 395)
+[ext_resource type="Texture2D" uid="uid://d2ynmqif12se" path="res://assets/textures/town/fountain_00003.png" id="3_mqf4m"]
+[ext_resource type="Texture2D" uid="uid://d075w1aai0j8b" path="res://assets/textures/town/fountain_00004.png" id="4_el1wg"]
+[ext_resource type="Texture2D" uid="uid://c7ayhai6bin2b" path="res://assets/textures/town/fountain_00005.png" id="5_xmis5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jc6qj"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_m72p2")
+"texture": ExtResource("1_ifxtb")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lfgns")
+"texture": ExtResource("2_jc6qj")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_uterx")
+"texture": ExtResource("3_mqf4m")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xo7qt")
+"texture": ExtResource("4_el1wg")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ifxtb")
+"texture": ExtResource("5_xmis5")
 }],
 "loop": true,
 "name": &"default",
@@ -58,7 +42,8 @@ collision_layer = 8
 position = Vector2(3, 1)
 sprite_frames = SubResource("SpriteFrames_jc6qj")
 autoplay = "default"
-frame_progress = 0.74685
+frame = 2
+frame_progress = 0.436009
 offset = Vector2(-3, -195)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

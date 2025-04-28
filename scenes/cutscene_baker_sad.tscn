@@ -1,11 +1,12 @@
-[gd_scene load_steps=28 format=3 uid="uid://bqnqr73fm0vbi"]
+[gd_scene load_steps=29 format=3 uid="uid://bqnqr73fm0vbi"]
 
 [ext_resource type="Script" uid="uid://ctbarts0le8sf" path="res://scripts/cutscenes.gd" id="1_7umlp"]
-[ext_resource type="Texture2D" uid="uid://d0ijaxmtirsw1" path="res://assets/textures/bg/blueBG-1.png" id="1_tc5j7"]
-[ext_resource type="Texture2D" uid="uid://r81yecu7ch" path="res://assets/textures/bg/blueBG-2.png" id="2_7umlp"]
-[ext_resource type="Texture2D" uid="uid://bdkxbwtkvu4st" path="res://assets/textures/bg/blueBG-3.png" id="3_my0du"]
-[ext_resource type="Texture2D" uid="uid://clnv61let0q3s" path="res://assets/textures/bg/blueBG-4.png" id="4_e8828"]
+[ext_resource type="Texture2D" uid="uid://vem37wfih1fs" path="res://assets/textures/bg/bad-anim_00001.png" id="2_7umlp"]
+[ext_resource type="Texture2D" uid="uid://bq0ocd0gh2jyi" path="res://assets/textures/bg/bad-anim_00002.png" id="3_my0du"]
+[ext_resource type="Texture2D" uid="uid://e7wvxhiryf6i" path="res://assets/textures/bg/bad-anim_00003.png" id="4_e8828"]
 [ext_resource type="Texture2D" uid="uid://bh60a1h2goucn" path="res://assets/textures/npcs/baker/spr_baker_happy_strip04.png" id="5_my0du"]
+[ext_resource type="Texture2D" uid="uid://bex8drv81gcwf" path="res://assets/textures/bg/bad-anim_00004.png" id="5_vo2w1"]
+[ext_resource type="Texture2D" uid="uid://bj087lfj86i8" path="res://assets/textures/bg/bad-anim_00005.png" id="6_6xu3q"]
 [ext_resource type="Texture2D" uid="uid://cdniyq0f66dkx" path="res://assets/textures/npcs/baker/spr_baker_walk_left_strip04.png" id="6_e8828"]
 [ext_resource type="Texture2D" uid="uid://cor1sfc6lhjhy" path="res://assets/textures/npcs/baker/spr_baker_sad_strip04.png" id="7_6xu3q"]
 [ext_resource type="AudioStream" uid="uid://bq4eeklxmgq0" path="res://assets/music/clip_bad_1.ogg" id="9_tc5j7"]
@@ -14,9 +15,6 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_tc5j7")
-}, {
-"duration": 1.0,
 "texture": ExtResource("2_7umlp")
 }, {
 "duration": 1.0,
@@ -24,6 +22,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("4_e8828")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_vo2w1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6xu3q")
 }],
 "loop": true,
 "name": &"default",
@@ -256,7 +260,7 @@ _data = {
 &"cutscene": SubResource("Animation_rp7jh")
 }
 
-[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_tc5j7"]
+[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_4mjdc"]
 
 [node name="cutsceneBakerSad" type="CanvasLayer"]
 script = ExtResource("1_7umlp")
@@ -266,6 +270,7 @@ modulate = Color(1, 1, 1, 0)
 position = Vector2(960, 540)
 sprite_frames = SubResource("SpriteFrames_6xu3q")
 autoplay = "default"
+frame_progress = 0.437996
 
 [node name="Baker" type="AnimatedSprite2D" parent="."]
 position = Vector2(2088, 549)
@@ -280,6 +285,6 @@ libraries = {
 autoplay = "RESET"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = SubResource("AudioStreamPolyphonic_tc5j7")
+stream = SubResource("AudioStreamPolyphonic_4mjdc")
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://buvupdat3fx0"
-path="res://.godot/imported/spr_fountain_strip05.png-fd29c25accb57cd6fb11db5aa5ace7d0.ctex"
+uid="uid://by8l81hmdkwnp"
+path="res://.godot/imported/good-anim_00002.png-c383647eaacd1576605ba65d5b64699b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/town/spr_fountain_strip05.png"
-dest_files=["res://.godot/imported/spr_fountain_strip05.png-fd29c25accb57cd6fb11db5aa5ace7d0.ctex"]
+source_file="res://assets/textures/bg/good-anim_00002.png"
+dest_files=["res://.godot/imported/good-anim_00002.png-c383647eaacd1576605ba65d5b64699b.ctex"]
 
 [params]
 

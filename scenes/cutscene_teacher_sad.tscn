@@ -1,10 +1,12 @@
-[gd_scene load_steps=26 format=3 uid="uid://b11n38sgdi8mr"]
+[gd_scene load_steps=28 format=3 uid="uid://b11n38sgdi8mr"]
 
 [ext_resource type="Script" uid="uid://ctbarts0le8sf" path="res://scripts/cutscenes.gd" id="1_dtfip"]
-[ext_resource type="Texture2D" uid="uid://cob2eknwlb2y4" path="res://assets/textures/bg/redBG-1.png" id="1_ne3mw"]
-[ext_resource type="Texture2D" uid="uid://dbaedk6g7428s" path="res://assets/textures/bg/redBG-2.png" id="2_dtfip"]
-[ext_resource type="Texture2D" uid="uid://c0nunh7e8h2u8" path="res://assets/textures/bg/redBG-3.png" id="3_4hq3q"]
+[ext_resource type="Texture2D" uid="uid://vem37wfih1fs" path="res://assets/textures/bg/bad-anim_00001.png" id="2_4hq3q"]
+[ext_resource type="Texture2D" uid="uid://bq0ocd0gh2jyi" path="res://assets/textures/bg/bad-anim_00002.png" id="3_h4ujs"]
+[ext_resource type="Texture2D" uid="uid://e7wvxhiryf6i" path="res://assets/textures/bg/bad-anim_00003.png" id="4_pop24"]
+[ext_resource type="Texture2D" uid="uid://bex8drv81gcwf" path="res://assets/textures/bg/bad-anim_00004.png" id="5_sa2st"]
 [ext_resource type="Texture2D" uid="uid://bti0hmqhg12bm" path="res://assets/textures/npcs/teacher/spr_teacher_happy_strip03.png" id="5_vmbba"]
+[ext_resource type="Texture2D" uid="uid://bj087lfj86i8" path="res://assets/textures/bg/bad-anim_00005.png" id="6_igi7b"]
 [ext_resource type="Texture2D" uid="uid://dlgsxf2jmjb87" path="res://assets/textures/npcs/teacher/spr_teacher_walk_left_strip04.png" id="6_sa2st"]
 [ext_resource type="Texture2D" uid="uid://cvs6lrydp7dwx" path="res://assets/textures/npcs/teacher/spr_teacher_sad_strip04.png" id="7_dtfip"]
 [ext_resource type="AudioStream" uid="uid://dpwd0u03dw07i" path="res://assets/music/clip_bad_3.ogg" id="8_ne3mw"]
@@ -13,20 +15,26 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_ne3mw")
+"texture": ExtResource("2_4hq3q")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_dtfip")
+"texture": ExtResource("3_h4ujs")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_4hq3q")
+"texture": ExtResource("4_pop24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_sa2st")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_igi7b")
 }],
 "loop": true,
 "name": &"default",
 "speed": 8.0
 }]
 
-[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_ne3mw"]
+[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_4hq3q"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ofng5"]
 atlas = ExtResource("5_vmbba")
@@ -269,7 +277,7 @@ sprite_frames = SubResource("SpriteFrames_6xu3q")
 autoplay = "default"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = SubResource("AudioStreamPolyphonic_ne3mw")
+stream = SubResource("AudioStreamPolyphonic_4hq3q")
 
 [node name="Teacher" type="AnimatedSprite2D" parent="."]
 position = Vector2(2088, 549)
