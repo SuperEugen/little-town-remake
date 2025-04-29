@@ -39,9 +39,9 @@ Original Tutorial: https://gamemaker.io/de/tutorials/little-town-gamemaker-tutor
 ## :framed_picture: Assets
 - **SFX**: SuperEugen  
 - **Music**: SuperEugen  
-- **Sprites**: SuperEugen and YoYo Games  
-- **Animations**: YoYo Games  
-- **Tiles**: YoYo Games  
+- **Sprites**: SuperEugen  
+- **Characters**: YoYo Games  
+- **Tiles**: SuperEugen  
 
 ## :man_teacher: Learning Ressources
 - Official Godot tutorial: [Your first 2D Game](https://docs.godotengine.org/en/stable/getting_started/first_2d_game/index.html)
