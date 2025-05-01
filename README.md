@@ -34,7 +34,7 @@ Original Tutorial: https://gamemaker.io/de/tutorials/little-town-gamemaker-tutor
 - **Sound recording**: iPhone with EZAudioCut  
 - **Music**: GarageBand with AppleLoops, converted to OGG with VLC  
 - **Sprites, Animations and Tiles**: Moho Pro 14.3, PNGs cropped with Mac Preview  
-- **Project management and documentation**: GitHub with Project  
+- **Project management and documentation**: GitHub with Project and Wiki  
 
 ## :framed_picture: Assets
 - **SFX**: SuperEugen  
