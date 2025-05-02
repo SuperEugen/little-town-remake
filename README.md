@@ -8,6 +8,8 @@ Original Tutorial: https://gamemaker.io/de/tutorials/little-town-gamemaker-tutor
 **Genre:** top town 2D, adventure, non pixel art  
 **Engine**: Godot 4.4  
 **Language**: GDScript  
+**Project Documentaion**: [Wiki](https://github.com/SuperEugen/little-town-remake/wiki)
+**Project Management**: [Kanban Board](https://github.com/users/SuperEugen/projects/1)
 
 ![Screenshot Godot 4.4](https://i.imgur.com/G9iwKYq.png)
 
