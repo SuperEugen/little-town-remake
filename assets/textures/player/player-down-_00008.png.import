@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2bgflu5pq3fs"
-path="res://.godot/imported/spr_player_putDown_down_strip06.png-536592f618b9a4ae36a08f45762e446b.ctex"
+uid="uid://b7tdsh8rxmg0c"
+path="res://.godot/imported/player-down-_00008.png-8c6160ce8d0bbcd6176330ec111b0d2f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/player/spr_player_putDown_down_strip06.png"
-dest_files=["res://.godot/imported/spr_player_putDown_down_strip06.png-536592f618b9a4ae36a08f45762e446b.ctex"]
+source_file="res://assets/textures/player/player-down-_00008.png"
+dest_files=["res://.godot/imported/player-down-_00008.png-8c6160ce8d0bbcd6176330ec111b0d2f.ctex"]
 
 [params]
 

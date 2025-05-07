@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mfmypbaq8jwj"
-path="res://.godot/imported/spr_player_pickUp_down_strip05.png-a8764e23390bed48c58ca7f446bab436.ctex"
+uid="uid://dpjqc6fbrv4mw"
+path="res://.godot/imported/player-down-_00011.png-c4d79bc84b7607e700110edf2d854f4b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/player/spr_player_pickUp_down_strip05.png"
-dest_files=["res://.godot/imported/spr_player_pickUp_down_strip05.png-a8764e23390bed48c58ca7f446bab436.ctex"]
+source_file="res://assets/textures/player/player-down-_00011.png"
+dest_files=["res://.godot/imported/player-down-_00011.png-c4d79bc84b7607e700110edf2d854f4b.ctex"]
 
 [params]
 
