@@ -43,7 +43,8 @@ Original Tutorial: https://gamemaker.io/de/tutorials/little-town-gamemaker-tutor
 - **Music**: SuperEugen  
 - **Sprites**: SuperEugen  
 - **Characters**: YoYo Games  
-- **Tiles**: SuperEugen  
+- **Tiles**: SuperEugen
+- **Game Idea**: [YoYo Games](https://gamemaker.io/) and  [Benjamin Rivers](https://www.bancy.co)  
 
 ## :man_teacher: Learning Ressources
 - Official Godot tutorial: [Your first 2D Game](https://docs.godotengine.org/en/stable/getting_started/first_2d_game/index.html)
